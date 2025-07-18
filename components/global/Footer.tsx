@@ -11,9 +11,10 @@ const Footer = () => {
           <div className='sm:col-span-2 max-w-sm'>
             <h4 className='text-base font-medium mb-6 text-white'>About Us</h4>
             <p className='text-slate-400 text-sm leading-relaxed'>
-              We provide high-quality, ready-to-use UI components and templates
-              designed with modern web standards. Our goal is to help developers
-              and designers build beautiful websites.
+              Tanosa Group is a premier service provider specializing in
+              governance, accountability, and operational improvement for
+              municipalities across South Africa. With a multifaceted approach,
+              we deliver an extensive array of professional services.
             </p>
           </div>
 
@@ -47,7 +48,7 @@ const Footer = () => {
             <p className='text-white text-sm'>
               149 President Reitz Ave, Westdene
             </p>
-            <p className='text-white text-sm'>Blomfontein, 9301</p>
+            <p className='text-white text-sm'>Bloemfontein, 9301</p>
             <p className=' flex items-center gap-2 text-white text-sm'>
               <Phone className='w-4 h-4' />
               084 256 4559

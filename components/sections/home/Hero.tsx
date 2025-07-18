@@ -12,8 +12,8 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <div className='relative z-10 flex h-full items-center justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex flex-row items-center justify-between w-full max-w-7xl mx-auto gap-8'>
+      <div className='relative z-10 flex h-screen md:h-full items-center justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-8'>
           {/* Left - Text Content */}
           <div className='flex-1'>
             <h1 className='mb-8 text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl text-slate-900'>
@@ -36,13 +36,13 @@ export default function Hero() {
           </div>
 
           {/* Right - Image */}
-          <div className='flex-1 hidden md:block float-right'>
+          <div className='flex-1'>
             <Image
-              src='/images/lady-image.jpg'
+              src='/images/transparent.png'
               alt='Hero Illustration'
-              className='w-full h-auto object-contain'
-              width={500}
-              height={500}
+              className='w-auto h-auto object-contain float-right'
+              width={800}
+              height={800}
             />
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 const NavLinks = [
@@ -26,15 +27,15 @@ export default function Navbar() {
           {/* logo */}
           <div>
             <Link href='/' className='flex items-center'>
-              {/* <Image
-              src='/images/techworld.png'
-              alt='Logo'
-              width={250}
-              height={60}
-              priority
-              className='h-auto w-auto'
-            /> */}
-              <h1 className='text-2xl font-bold text-gray-800'>Tanosa Group</h1>
+              <Image
+                src='/images/logo.png'
+                alt='Logo'
+                width={250}
+                height={60}
+                priority
+                className='h-auto w-auto'
+              />
+              {/* <h1 className='text-2xl font-bold text-gray-800'>Tanosa Group</h1> */}
             </Link>
           </div>
 
