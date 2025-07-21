@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Send } from 'lucide-react'
 import { contactFormSchema } from '@/lib/zodSchemas'
+import { motion } from 'motion/react'
 
 type ContactFormData = z.infer<typeof contactFormSchema>
 
@@ -12,19 +13,25 @@ export default function ContactForm() {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({ resolver: zodResolver(contactFormSchema) })
 
   const onSubmit = async (data: ContactFormData) => {
     console.log(data)
-    reset()
   }
   return (
     <div className='min-h-screen'>
-      <div className='bg-white rounded-lg shadow-xl overflow-hidden'>
+      <motion.div
+        className='bg-white rounded-lg shadow-xl overflow-hidden'
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{
+          duration: 0.6,
+          ease: [0.42, 0, 1, 1], // You can also use custom Bezier: [0.42, 0, 1, 1]
+        }}
+      >
         {/* Form */}
-        <div className='p-8 space-y-6'>
+        <form onSubmit={handleSubmit(onSubmit)} className='p-8 space-y-6'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
             {/* Name Field */}
             <div>
@@ -163,8 +170,7 @@ export default function ContactForm() {
           {/* Submit Button */}
           <div className='pt-4'>
             <button
-              type='button'
-              onClick={handleSubmit(onSubmit)}
+              type='submit'
               disabled={isSubmitting}
               className='inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all'
             >
@@ -172,8 +178,8 @@ export default function ContactForm() {
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </div>
-        </div>
-      </div>
+        </form>
+      </motion.div>
     </div>
   )
 }

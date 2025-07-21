@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { DownloadIcon } from 'lucide-react'
+import { motion } from 'motion/react'
 
 export default function AboutSection() {
   const [activeTab, setActiveTab] = useState('Our Mission')
@@ -46,7 +47,15 @@ export default function AboutSection() {
   return (
     <section className='py-16 px-4 max-w-7xl mx-auto mb-24'>
       {/* Header */}
-      <div className='text-center mb-12'>
+      <motion.div
+        className='text-center mb-12'
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.6,
+          ease: [0.42, 0, 1, 1], // You can also use custom Bezier: [0.42, 0, 1, 1]
+        }}
+      >
         <h2 className='text-4xl md:text-5xl font-bold text-blue-900 mb-6'>
           About Us
         </h2>
@@ -56,11 +65,19 @@ export default function AboutSection() {
           South Africa. With a multifaceted approach, we deliver an extensive
           array of professional services.
         </p>
-      </div>
+      </motion.div>
 
       {/* Tab Navigation */}
       <div className='flex justify-center mb-12'>
-        <div className='flex space-x-8 border-b border-gray-200'>
+        <motion.div
+          className='flex space-x-8 border-b border-gray-200'
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: [0.42, 0, 1, 1], // You can also use custom Bezier: [0.42, 0, 1, 1]
+          }}
+        >
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -74,11 +91,19 @@ export default function AboutSection() {
               {tab}
             </button>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Content Section */}
-      <div className='grid lg:grid-cols-2 gap-12 items-center'>
+      <motion.div
+        className='grid lg:grid-cols-2 gap-12 items-center'
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.6,
+          ease: [0.42, 0, 1, 1], // You can also use custom Bezier: [0.42, 0, 1, 1]
+        }}
+      >
         {/* Image */}
         <div className='order-2 lg:order-none relative'>
           <div className='rounded-2xl overflow-hidden shadow-xl'>
@@ -110,7 +135,7 @@ export default function AboutSection() {
             </Link>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

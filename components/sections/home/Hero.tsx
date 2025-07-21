@@ -1,5 +1,7 @@
+'use client'
+
 import Image from 'next/image'
-import React from 'react'
+import { motion } from 'motion/react'
 
 export default function Hero() {
   return (
@@ -12,7 +14,15 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <div className='relative z-10 flex h-screen md:h-full items-center justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <motion.div
+        className='relative z-10 flex h-screen md:h-full items-center justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.6,
+          ease: [0.42, 0, 1, 1], // You can also use custom Bezier: [0.42, 0, 1, 1]
+        }}
+      >
         <div className='flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-8'>
           {/* Left - Text Content */}
           <div className='flex-1'>
@@ -46,7 +56,7 @@ export default function Hero() {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

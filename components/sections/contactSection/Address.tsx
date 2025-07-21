@@ -1,5 +1,8 @@
+'use client'
+
 import React from 'react'
 import { MailOpen, Phone } from 'lucide-react'
+import { motion } from 'motion/react'
 
 const contacts = [
   {
@@ -18,7 +21,14 @@ const contacts = [
 
 export default function Address() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{
+        duration: 0.6,
+        ease: [0.42, 0, 1, 1], // You can also use custom Bezier: [0.42, 0, 1, 1]
+      }}
+    >
       <h2 className='text-2xl font-bold mb-4'>Contact</h2>
       <p className='mb-6'>
         We are available for questions, feedback, or collaboration
@@ -45,6 +55,6 @@ export default function Address() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }

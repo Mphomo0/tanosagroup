@@ -1,5 +1,8 @@
+'use client'
+
 import { Star } from 'lucide-react'
 import Image from 'next/image'
+import { motion } from 'motion/react'
 
 const review = [
   {
@@ -33,7 +36,15 @@ const review = [
 export default function Testimonials() {
   return (
     <section className='py-12 bg-gray-50 sm:py-16 lg:py-20'>
-      <div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
+      <motion.div
+        className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.6,
+          ease: [0.42, 0, 1, 1], // You can also use custom Bezier: [0.42, 0, 1, 1]
+        }}
+      >
         <div className='flex flex-col items-center'>
           <div className='text-center'>
             <h2 className='mt-4 text-3xl font-bold text-blue-900 sm:text-4xl xl:text-5xl font-pj'>
@@ -80,7 +91,7 @@ export default function Testimonials() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

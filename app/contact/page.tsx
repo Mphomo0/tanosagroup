@@ -1,6 +1,5 @@
 import Address from '@/components/sections/contactSection/Address'
 import ContactForm from '@/components/sections/contactSection/ContactForm'
-import React from 'react'
 
 export default function Contact() {
   return (
