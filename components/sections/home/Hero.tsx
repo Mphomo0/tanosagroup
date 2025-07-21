@@ -41,8 +41,6 @@ export default function Hero() {
               src='/images/transparent.png'
               alt='Hero Illustration'
               className='w-auto h-auto object-contain float-right'
-              width={800}
-              height={800}
             />
           </div>
         </div>
