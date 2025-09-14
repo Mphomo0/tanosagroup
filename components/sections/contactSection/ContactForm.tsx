@@ -4,8 +4,8 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Send } from 'lucide-react'
-import { contactFormSchema } from '@/lib/zodSchemas'
 import { motion } from 'motion/react'
+import { contactFormSchema } from '@/lib/zodSchemas'
 
 type ContactFormData = z.infer<typeof contactFormSchema>
 
@@ -18,11 +18,31 @@ export default function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     console.log(data)
+
+    try {
+      const response = await fetch('/api/send-mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      const result = await response.json()
+      if (!response.ok) {
+        alert(`Error: ${result.error || 'Unknown error'}`)
+      } else {
+        alert('Your message has been sent successfully!')
+      }
+    } catch (error) {
+      alert('There was an error sending your message. Please try again.')
+      console.error('Error sending email:', error)
+    }
   }
   return (
-    <div className='min-h-screen'>
+    <div className="min-h-screen">
       <motion.div
-        className='bg-white rounded-lg shadow-xl overflow-hidden'
+        className="bg-white rounded-lg shadow-xl overflow-hidden"
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{
@@ -31,23 +51,23 @@ export default function ContactForm() {
         }}
       >
         {/* Form */}
-        <form onSubmit={handleSubmit(onSubmit)} className='p-8 space-y-6'>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+        <form onSubmit={handleSubmit(onSubmit)} className="p-8 space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Name Field */}
             <div>
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Your Name *
               </label>
               <input
-                type='text'
+                type="text"
                 {...register('name')}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                   errors.name ? 'border-red-500' : 'border-gray-300'
                 }`}
-                placeholder='Enter Name'
+                placeholder="Enter Name"
               />
               {errors.name && (
-                <p className='text-red-500 text-sm mt-1'>
+                <p className="text-red-500 text-sm mt-1">
                   {errors.name.message}
                 </p>
               )}
@@ -55,19 +75,19 @@ export default function ContactForm() {
 
             {/* Email Field */}
             <div>
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Your Email *
               </label>
               <input
-                type='email'
+                type="email"
                 {...register('email')}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
-                placeholder='Enter Email'
+                placeholder="Enter Email"
               />
               {errors.email && (
-                <p className='text-red-500 text-sm mt-1'>
+                <p className="text-red-500 text-sm mt-1">
                   {errors.email.message}
                 </p>
               )}
@@ -75,19 +95,19 @@ export default function ContactForm() {
 
             {/* Phone Field */}
             <div>
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Your Number
               </label>
               <input
-                type='tel'
+                type="tel"
                 {...register('phone')}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                   errors.phone ? 'border-red-500' : 'border-gray-300'
                 }`}
-                placeholder='Enter Phone No.'
+                placeholder="Enter Phone No."
               />
               {errors.phone && (
-                <p className='text-red-500 text-sm mt-1'>
+                <p className="text-red-500 text-sm mt-1">
                   {errors.phone.message}
                 </p>
               )}
@@ -95,19 +115,19 @@ export default function ContactForm() {
 
             {/* Website Field */}
             <div>
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Website
               </label>
               <input
-                type='url'
+                type="url"
                 {...register('website')}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                   errors.website ? 'border-red-500' : 'border-gray-300'
                 }`}
-                placeholder='Enter Website'
+                placeholder="Enter Website"
               />
               {errors.website && (
-                <p className='text-red-500 text-sm mt-1'>
+                <p className="text-red-500 text-sm mt-1">
                   {errors.website.message}
                 </p>
               )}
@@ -115,32 +135,32 @@ export default function ContactForm() {
 
             {/* Company Field */}
             <div>
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Company
               </label>
               <input
-                type='text'
+                type="text"
                 {...register('company')}
-                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all'
-                placeholder='Enter Company'
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                placeholder="Enter Company"
               />
             </div>
 
             {/* Subject Field */}
             <div>
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Subject *
               </label>
               <input
-                type='text'
+                type="text"
                 {...register('subject')}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                   errors.subject ? 'border-red-500' : 'border-gray-300'
                 }`}
-                placeholder='Enter Subject'
+                placeholder="Enter Subject"
               />
               {errors.subject && (
-                <p className='text-red-500 text-sm mt-1'>
+                <p className="text-red-500 text-sm mt-1">
                   {errors.subject.message}
                 </p>
               )}
@@ -149,7 +169,7 @@ export default function ContactForm() {
 
           {/* Message Field */}
           <div>
-            <label className='block text-sm font-medium text-gray-700 mb-2'>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
               Message *
             </label>
             <textarea
@@ -158,23 +178,23 @@ export default function ContactForm() {
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none ${
                 errors.message ? 'border-red-500' : 'border-gray-300'
               }`}
-              placeholder='Enter Message'
+              placeholder="Enter Message"
             />
             {errors.message && (
-              <p className='text-red-500 text-sm mt-1'>
+              <p className="text-red-500 text-sm mt-1">
                 {errors.message.message}
               </p>
             )}
           </div>
 
           {/* Submit Button */}
-          <div className='pt-4'>
+          <div className="pt-4">
             <button
-              type='submit'
+              type="submit"
               disabled={isSubmitting}
-              className='inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all'
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             >
-              <Send className='w-4 h-4 mr-2' />
+              <Send className="w-4 h-4 mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </div>
