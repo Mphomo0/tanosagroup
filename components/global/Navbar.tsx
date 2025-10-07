@@ -30,7 +30,7 @@ export default function Navbar() {
               <Image
                 src="/images/Tanosa_Group_logo.png"
                 alt="Logo"
-                width={250}
+                width={220}
                 height={80}
                 priority
                 className="h-full w-full"
