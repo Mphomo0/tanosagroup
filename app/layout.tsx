@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'Tanosa Group - Innovative Business Solutions',
   description:
     'Premier service provider specializing in governance, accountability, and operational improvement for municipalities across South Africa',
+  other: {
+    'google-site-verification': 'NGImAA3SJhPN6t7BHUfUXiGjsA-olnCds9ZhWXkMXY',
+  },
 }
 
 export default function RootLayout({
@@ -18,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body className={`${inter.className} bg-gray-50`}>
         <Navbar />
         {children}
