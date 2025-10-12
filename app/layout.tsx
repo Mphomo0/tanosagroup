@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Tanosa Group - Innovative Business Solutions',
   description:
-    'Premier service provider specializing in governance, accountability, and operational improvement for municipalities across South Africa',
+    'Premier service provider specializing in governance, accountability, and operational improvement for municipalities in Bloemfontein and across South Africa',
   other: {
     'google-site-verification': 'JNGImAA3SJhPN6t7BHUfUXiGjsA-olnCds9ZhWXkMXY',
   },
