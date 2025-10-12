@@ -46,12 +46,12 @@ const Footer = () => {
               Contact Us
             </h4>
             <p className="text-white text-sm">
-              149 President Reitz Ave, Westdene
+              37 Zastron Street, Bloemfontein Central,
             </p>
             <p className="text-white text-sm">Bloemfontein, 9301</p>
             <p className=" flex items-center gap-2 text-white text-sm">
               <Phone className="w-4 h-4" />
-              084 256 4559
+              079 596 6442
             </p>
             <p className="text-white text-sm">tanosatrading@gmail.com</p>
           </div>
@@ -64,7 +64,7 @@ const Footer = () => {
               href="https://www.nostalgic-studio.co.za"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white underline"
+              className="text-blue-400 hover:text-white"
             >
               Nostalgic Studio
             </a>
