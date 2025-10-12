@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'Premier service provider specializing in governance, accountability, and operational improvement for municipalities across South Africa',
   other: {
-    'google-site-verification': 'NGImAA3SJhPN6t7BHUfUXiGjsA-olnCds9ZhWXkMXY',
+    'google-site-verification': 'JNGImAA3SJhPN6t7BHUfUXiGjsA-olnCds9ZhWXkMXY',
   },
 }
 
