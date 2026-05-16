@@ -29,6 +29,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://www.tanosagroup.co.za/sitemap.xml',
+    sitemap: 'https://www.tanosagroup.com/sitemap.xml',
   }
 }

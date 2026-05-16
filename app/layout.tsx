@@ -6,7 +6,7 @@ import Footer from '@/components/global/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const baseUrl = 'https://www.tanosagroup.co.za'
+const baseUrl = 'https://www.tanosagroup.com'
 
 export const viewport: Viewport = {
   themeColor: '#1e3a8a',
