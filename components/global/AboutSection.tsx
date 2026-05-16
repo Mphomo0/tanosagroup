@@ -120,9 +120,9 @@ export default function AboutSection() {
             <div className="pt-4">
               <a
                 href="/about"
-                className="btn-premium rounded-xl"
+                className="btn-premium rounded-xl w-full sm:w-auto justify-center"
               >
-                <span className="flex items-center gap-2">
+                <span className="flex items-center justify-center gap-2">
                   <Download className="w-4 h-4" />
                   Download Company Profile
                 </span>
