@@ -29,17 +29,17 @@ export default function CTA() {
             Have Questions? We&apos;re Here to Help. Get in touch with our team
             and let&apos;s discuss how we can support your municipality or business.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl text-base font-semibold text-surface-900 bg-white hover:bg-surface-50 hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:-translate-y-1"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl text-base font-semibold text-surface-900 bg-white hover:bg-surface-50 hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto"
             >
               <span>Let&apos;s Talk</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl text-base font-semibold text-white border border-white/30 hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl text-base font-semibold text-white border border-white/30 hover:bg-white/10 backdrop-blur-sm transition-all duration-300 w-full sm:w-auto"
             >
               <span>Our Services</span>
             </Link>

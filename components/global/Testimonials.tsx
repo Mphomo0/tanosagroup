@@ -99,7 +99,7 @@ export default function Testimonials() {
             <p className="text-surface-600 mb-6">Experience the difference with Tanosa Group</p>
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 transition-colors w-full sm:w-auto"
             >
               Get in Touch
             </a>

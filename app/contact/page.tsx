@@ -17,14 +17,18 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <>
-      <PageHero 
+      <PageHero
         badge="Get in Touch"
-        title={<><span className="text-gradient">Contact</span> Us</>}
+        title={
+          <>
+            <span className="text-gradient">Contact</span> Us
+          </>
+        }
         subtitle="Have a question or want to discuss how we can help? We'd love to hear from you."
       />
 
       <div className="container-page pb-16 lg:pb-20">
-        <div className="grid lg:grid-cols-[1fr_2fr] gap-10 items-start">
+        <div className="grid lg:grid-cols-[1fr_2fr] gap-10 items-start py-8 lg:py-36">
           <Address />
           <ContactForm />
         </div>

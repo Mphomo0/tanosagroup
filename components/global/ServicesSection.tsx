@@ -109,13 +109,13 @@ export default function ServicesSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center mt-16"
+          className="text-center mt-12 sm:mt-16"
         >
           <Link
             href="/services"
-            className="btn-premium rounded-2xl"
+            className="btn-premium rounded-2xl w-full sm:w-auto justify-center"
           >
-            <span className="flex items-center gap-2">
+            <span className="flex items-center justify-center gap-2">
               View All Services
               <ArrowRight className="w-4 h-4" />
             </span>

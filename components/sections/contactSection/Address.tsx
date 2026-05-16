@@ -39,7 +39,7 @@ export default function Address() {
         <div className="space-y-3 text-sm">
           <p className="flex items-start gap-3 text-surface-600">
             <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-brand-500" />
-            <span className="break-words">789 Business Park, Bloemfontein, South Africa</span>
+            <span className="break-words">37 Zastron Street, Bloemfontein Central, Bloemfontein, 9301</span>
           </p>
           <p className="flex items-center gap-3 text-surface-600">
             <Phone className="w-4 h-4 shrink-0 text-brand-500" />
