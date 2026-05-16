@@ -17,189 +17,139 @@ export default function ContactForm() {
   } = useForm<ContactFormData>({ resolver: zodResolver(contactFormSchema) })
 
   const onSubmit = async (data: ContactFormData) => {
-    console.log(data)
-
     try {
       const response = await fetch('/api/send-mail', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       })
-
       const result = await response.json()
       if (!response.ok) {
         alert(`Error: ${result.error || 'Unknown error'}`)
       } else {
         alert('Your message has been sent successfully!')
       }
-    } catch (error) {
+    } catch {
       alert('There was an error sending your message. Please try again.')
-      console.error('Error sending email:', error)
     }
   }
+
   return (
-    <div className="min-h-screen">
-      <motion.div
-        className="bg-white rounded-lg shadow-xl overflow-hidden"
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{
-          duration: 0.6,
-          ease: [0.42, 0, 1, 1], // You can also use custom Bezier: [0.42, 0, 1, 1]
-        }}
-      >
-        {/* Form */}
-        <form onSubmit={handleSubmit(onSubmit)} className="p-8 space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Name Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Your Name *
-              </label>
-              <input
-                type="text"
-                {...register('name')}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
-                  errors.name ? 'border-red-500' : 'border-gray-300'
-                }`}
-                placeholder="Enter Name"
-              />
-              {errors.name && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.name.message}
-                </p>
-              )}
-            </div>
-
-            {/* Email Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Your Email *
-              </label>
-              <input
-                type="email"
-                {...register('email')}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
-                  errors.email ? 'border-red-500' : 'border-gray-300'
-                }`}
-                placeholder="Enter Email"
-              />
-              {errors.email && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.email.message}
-                </p>
-              )}
-            </div>
-
-            {/* Phone Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Your Number
-              </label>
-              <input
-                type="tel"
-                {...register('phone')}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
-                  errors.phone ? 'border-red-500' : 'border-gray-300'
-                }`}
-                placeholder="Enter Phone No."
-              />
-              {errors.phone && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.phone.message}
-                </p>
-              )}
-            </div>
-
-            {/* Website Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Website
-              </label>
-              <input
-                type="url"
-                {...register('website')}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
-                  errors.website ? 'border-red-500' : 'border-gray-300'
-                }`}
-                placeholder="Enter Website"
-              />
-              {errors.website && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.website.message}
-                </p>
-              )}
-            </div>
-
-            {/* Company Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Company
-              </label>
-              <input
-                type="text"
-                {...register('company')}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                placeholder="Enter Company"
-              />
-            </div>
-
-            {/* Subject Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Subject *
-              </label>
-              <input
-                type="text"
-                {...register('subject')}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
-                  errors.subject ? 'border-red-500' : 'border-gray-300'
-                }`}
-                placeholder="Enter Subject"
-              />
-              {errors.subject && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.subject.message}
-                </p>
-              )}
-            </div>
-          </div>
-
-          {/* Message Field */}
+    <motion.div
+      initial={{ opacity: 0, x: 30 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white rounded-2xl shadow-sm border border-surface-100 overflow-hidden"
+    >
+      <div className="gradient-brand px-8 py-6">
+        <h3 className="text-xl font-semibold text-white">Send Us a Message</h3>
+        <p className="text-brand-100 text-sm mt-1">
+          Fill out the form below and we&apos;ll get back to you promptly.
+        </p>
+      </div>
+      <form onSubmit={handleSubmit(onSubmit)} className="p-8 space-y-6">
+        <div className="grid sm:grid-cols-2 gap-5">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Message *
+            <label className="block text-sm font-medium text-surface-700 mb-1.5">
+              Your Name *
             </label>
-            <textarea
-              {...register('message')}
-              rows={6}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none ${
-                errors.message ? 'border-red-500' : 'border-gray-300'
+            <input
+              type="text"
+              {...register('name')}
+              className={`w-full px-4 py-2.5 rounded-xl border text-sm transition-all focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none ${
+                errors.name ? 'border-red-400 bg-red-50' : 'border-surface-200 bg-surface-50'
               }`}
-              placeholder="Enter Message"
+              placeholder="Enter Name"
             />
-            {errors.message && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.message.message}
-              </p>
-            )}
+            {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
           </div>
+          <div>
+            <label className="block text-sm font-medium text-surface-700 mb-1.5">
+              Your Email *
+            </label>
+            <input
+              type="email"
+              {...register('email')}
+              className={`w-full px-4 py-2.5 rounded-xl border text-sm transition-all focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none ${
+                errors.email ? 'border-red-400 bg-red-50' : 'border-surface-200 bg-surface-50'
+              }`}
+              placeholder="Enter Email"
+            />
+            {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-surface-700 mb-1.5">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              {...register('phone')}
+              className={`w-full px-4 py-2.5 rounded-xl border text-sm transition-all focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none ${
+                errors.phone ? 'border-red-400 bg-red-50' : 'border-surface-200 bg-surface-50'
+              }`}
+              placeholder="Enter Phone No."
+            />
+            {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-surface-700 mb-1.5">Website</label>
+            <input
+              type="url"
+              {...register('website')}
+              className={`w-full px-4 py-2.5 rounded-xl border text-sm transition-all focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none ${
+                errors.website ? 'border-red-400 bg-red-50' : 'border-surface-200 bg-surface-50'
+              }`}
+              placeholder="Enter Website"
+            />
+            {errors.website && <p className="text-red-500 text-xs mt-1">{errors.website.message}</p>}
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-surface-700 mb-1.5">Company</label>
+            <input
+              type="text"
+              {...register('company')}
+              className="w-full px-4 py-2.5 rounded-xl border border-surface-200 bg-surface-50 text-sm transition-all focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none"
+              placeholder="Enter Company"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-surface-700 mb-1.5">Subject *</label>
+            <input
+              type="text"
+              {...register('subject')}
+              className={`w-full px-4 py-2.5 rounded-xl border text-sm transition-all focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none ${
+                errors.subject ? 'border-red-400 bg-red-50' : 'border-surface-200 bg-surface-50'
+              }`}
+              placeholder="Enter Subject"
+            />
+            {errors.subject && <p className="text-red-500 text-xs mt-1">{errors.subject.message}</p>}
+          </div>
+        </div>
 
-          {/* Submit Button */}
-          <div className="pt-4">
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-            >
-              <Send className="w-4 h-4 mr-2" />
-              {isSubmitting ? 'Sending...' : 'Send Message'}
-            </button>
-          </div>
-        </form>
-      </motion.div>
-    </div>
+        <div>
+          <label className="block text-sm font-medium text-surface-700 mb-1.5">Message *</label>
+          <textarea
+            {...register('message')}
+            rows={5}
+            className={`w-full px-4 py-2.5 rounded-xl border text-sm transition-all focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none resize-none ${
+              errors.message ? 'border-red-400 bg-red-50' : 'border-surface-200 bg-surface-50'
+            }`}
+            placeholder="Enter Message"
+          />
+          {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>}
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-white gradient-brand hover:shadow-lg hover:shadow-brand-600/25 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <Send className="w-4 h-4" />
+            {isSubmitting ? 'Sending...' : 'Send Message'}
+          </button>
+        </div>
+      </form>
+    </motion.div>
   )
 }

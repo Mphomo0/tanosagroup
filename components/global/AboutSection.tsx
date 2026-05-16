@@ -2,140 +2,135 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-import { DownloadIcon } from 'lucide-react'
 import { motion } from 'motion/react'
+import { Target, Eye, BookOpen, Download, Sparkles } from 'lucide-react'
+
+const tabs = [
+  { id: 'Our Mission', icon: Target, label: 'Mission' },
+  { id: 'Our Vision', icon: Eye, label: 'Vision' },
+  { id: 'Our Story', icon: BookOpen, label: 'Story' },
+]
+
+const tabContent: Record<string, { title: string; content: string }> = {
+  'Our Mission': {
+    title: 'Shaping the Future of Digital Excellence',
+    content:
+      'Our mission is to be the catalyst for change and progress in municipal governance. We aim to provide municipalities with the consultancy and strategic insights necessary to achieve growth, accountability, and positive change collaboratively.',
+  },
+  'Our Vision': {
+    title: 'Driving Success Through Innovation and Sustainable, Customer-Focused Solutions',
+    content:
+      'Our vision is to facilitate transformative growth and innovation within the municipal landscape by embodying excellence and integrity. We strive to exceed client expectations and secure our position as the trusted partner for success across all engagements.',
+  },
+  'Our Story': {
+    title: 'Our Journey of Growth and Innovation',
+    content:
+      'Founded with a vision to deliver impactful solutions, Tanosa Group has earned a reputation for reliability and innovation. Our dedicated team combines industry expertise with practical solutions to serve clients effectively in the Private Sector, Government Department and Municipalities.',
+  },
+}
 
 export default function AboutSection() {
   const [activeTab, setActiveTab] = useState('Our Mission')
-
-  const tabs = ['Our Story', 'Our Mission', 'Our Vision']
-
-  const getTabContent = () => {
-    switch (activeTab) {
-      case 'Our Story':
-        return {
-          title: 'Our Journey of Growth and Innovation',
-          content:
-            'Founded with a vision to deliver impactful solutions, Tanosa Group has earned a reputation for reliability and innovation. Our dedicated team combines industry expertise with practical solutions to serve clients effectively in the Private Sector, Government Department and Municipalities.',
-        }
-      case 'Our Vision':
-        return {
-          title:
-            'Driving Success Through Innovation and Sustainable, Customer-Focused Solutions',
-          content:
-            'Our vision is to facilitate transformative growth and innovation within the municipal landscape by embodying excellence and integrity. We strive to exceed client expectations and secure our position as the trusted partner for success across all engagements.',
-        }
-      case 'Our Mission':
-        return {
-          title: 'Shaping the Future of Digital Excellence',
-          content:
-            'Our mission is to be the catalyst for change and progress in municipal governance. We aim to provide municipalities with the consultancy and strategic insights necessary to achieve growth, accountability, and positive change collaboratively.',
-        }
-      default:
-        return {
-          title:
-            'Driving Success Through Innovation and Sustainable, Customer-Focused Solutions',
-          content:
-            'Our vision is to facilitate transformative growth and innovation within the municipal landscape by embodying excellence and integrity. We strive to exceed client expectations and secure our position as the trusted partner for success across all engagements.',
-        }
-    }
-  }
-
-  const currentContent = getTabContent()
+  const current = tabContent[activeTab]
 
   return (
-    <section className='py-16 px-4 max-w-7xl mx-auto mb-24'>
-      {/* Header */}
-      <motion.div
-        className='text-center mb-12'
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.6,
-          ease: [0.42, 0, 1, 1], // You can also use custom Bezier: [0.42, 0, 1, 1]
-        }}
-      >
-        <h2 className='text-4xl md:text-5xl font-bold text-blue-900 mb-6'>
-          About Us
-        </h2>
-        <p className='text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed'>
-          Tanosa Group is a premier service provider specializing in governance,
-          accountability, and operational improvement for municipalities across
-          South Africa. With a multifaceted approach, we deliver an extensive
-          array of professional services.
-        </p>
-      </motion.div>
+    <section className="section-padding relative overflow-hidden">
+      <div className="absolute inset-0 bg-surface-100/50 -z-10" />
+      <div className="absolute top-40 left-0 w-72 h-72 bg-brand-200/30 rounded-full blur-[80px] -z-10" />
+      <div className="absolute bottom-40 right-0 w-96 h-96 bg-brand-100/40 rounded-full blur-[100px] -z-10" />
 
-      {/* Tab Navigation */}
-      <div className='flex justify-center mb-12'>
+      <div className="container-page">
         <motion.div
-          className='flex space-x-8 border-b border-gray-200'
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.6,
-            ease: [0.42, 0, 1, 1], // You can also use custom Bezier: [0.42, 0, 1, 1]
-          }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`pb-3 px-1 text-lg font-medium transition-colors duration-200 ${
-                activeTab === tab
-                  ? 'text-red-600 border-b-2 border-red-600'
-                  : 'text-gray-500 hover:text-gray-700'
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-100 text-brand-700 text-sm font-medium mb-4">
+            <Sparkles className="w-4 h-4" />
+            About Us
+          </div>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-surface-900 mb-6">
+            Who We <span className="text-gradient">Are</span>
+          </h2>
+          <p className="text-lg text-surface-600 max-w-3xl mx-auto leading-relaxed">
+            Tanosa Group is a premier service provider specializing in governance,
+            accountability, and operational improvement for municipalities across
+            South Africa. With a multifaceted approach, we deliver an extensive
+            array of professional services.
+          </p>
+        </motion.div>
+
+        <div className="flex justify-center mb-12">
+          <div className="inline-flex bg-white rounded-2xl p-1.5 gap-1 shadow-lg shadow-surface-200/30 border border-surface-200/50">
+            {tabs.map((tab) => {
+              const Icon = tab.icon
+              const isActive = activeTab === tab.id
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
+                    isActive
+                      ? 'bg-brand-600 text-white shadow-md'
+                      : 'text-surface-500 hover:text-surface-700 hover:bg-surface-50'
+                  }`}
+                >
+                  <Icon className="w-4 h-4" />
+                  {tab.label}
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+        >
+          <div className="relative order-2 lg:order-none">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-br from-brand-200/40 to-brand-100/20 rounded-3xl blur-2xl" />
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/50">
+                <Image
+                  src="/images/about1.jpg"
+                  alt="Tanosa Group team collaboration"
+                  width={600}
+                  height={450}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-600 rounded-2xl shadow-lg flex items-center justify-center">
+                <span className="text-white text-xl font-bold">15+</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="order-1 lg:order-none space-y-6">
+            <h3 className="text-3xl sm:text-4xl font-bold text-surface-900 leading-tight">
+              {current.title}
+            </h3>
+            <p className="text-surface-600 text-lg leading-relaxed">
+              {current.content}
+            </p>
+            <div className="pt-4">
+              <a
+                href="/about"
+                className="btn-premium rounded-xl"
+              >
+                <span className="flex items-center gap-2">
+                  <Download className="w-4 h-4" />
+                  Download Company Profile
+                </span>
+              </a>
+            </div>
+          </div>
         </motion.div>
       </div>
-
-      {/* Content Section */}
-      <motion.div
-        className='grid lg:grid-cols-2 gap-12 items-center'
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.6,
-          ease: [0.42, 0, 1, 1], // You can also use custom Bezier: [0.42, 0, 1, 1]
-        }}
-      >
-        {/* Image */}
-        <div className='order-2 lg:order-none relative'>
-          <div className='rounded-2xl overflow-hidden shadow-xl'>
-            <Image
-              src='/images/about1.jpg'
-              alt='Team collaboration meeting with laptops and discussion'
-              width={600}
-              height={400}
-              className='w-full h-auto object-cover'
-            />
-          </div>
-        </div>
-
-        {/* Text Content */}
-        <div className='order-1 lg:order-none space-y-6'>
-          <h3 className='text-3xl md:text-4xl font-bold text-blue-900 leading-tight'>
-            {currentContent.title}
-          </h3>
-          <p className='text-gray-600 text-lg leading-relaxed'>
-            {currentContent.content}
-          </p>
-          <div className='pt-4'>
-            <Link
-              href='/about'
-              className='inline-flex items-center rounded-lg px-6 py-3 font-medium bg-blue-600 text-white hover:bg-black ml-2'
-            >
-              Download &nbsp;&nbsp;
-              <DownloadIcon className='h-6 w-6' />
-            </Link>
-          </div>
-        </div>
-      </motion.div>
     </section>
   )
 }

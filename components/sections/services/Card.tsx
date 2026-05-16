@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface CardProps {
   number: number
   title: string
@@ -7,31 +5,25 @@ interface CardProps {
   icon: React.ComponentType<{ size?: number; className?: string }>
 }
 
-export default function Card({
-  number,
-  title,
-  description,
-  icon: Icon,
-}: CardProps) {
+export default function Card({ number, title, description, icon: Icon }: CardProps) {
   return (
-    <div className='bg-white hover:shadow-lg transition-all duration-300 p-9 space-y-5 relative overflow-hidden rounded-2xl'>
-      {/* Number Bubble */}
-      <div className='w-24 h-24 bg-blue-700 rounded-full absolute -right-5 -top-7 flex items-center justify-center'>
-        <p className='text-white text-2xl font-bold'>
+    <div className="group bg-white rounded-2xl p-6 sm:p-8 relative overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      <div className="absolute -top-8 -right-8 w-24 h-24 gradient-brand rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+        <span className="text-white text-xl font-bold">
           {String(number).padStart(2, '0')}
-        </p>
+        </span>
       </div>
 
-      {/* Icon */}
-      <div className='text-blue-700'>
-        <Icon size={48} className='w-12 h-12' />
+      <div className="w-14 h-14 rounded-xl bg-brand-50 flex items-center justify-center mb-5 text-brand-700 group-hover:bg-brand-100 transition-colors">
+        <Icon size={28} className="w-7 h-7" />
       </div>
 
-      {/* Title and Description */}
-      <div className='space-y-2'>
-        <h1 className='font-bold text-xl'>{title}</h1>
-        <p className='text-sm text-zinc-500 leading-6'>{description}</p>
-      </div>
+      <h3 className="text-lg font-semibold text-surface-900 mb-3 pr-12">
+        {title}
+      </h3>
+      <p className="text-sm text-surface-500 leading-relaxed">
+        {description}
+      </p>
     </div>
   )
 }

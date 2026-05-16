@@ -6,247 +6,121 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 
+const sections = [
+  {
+    value: 'branding',
+    title: 'Branding Services',
+    content: (
+      <div className="space-y-4">
+        <p className="text-surface-600">
+          <strong>Objective:</strong> Create a cohesive brand identity that resonates with your audiences.
+        </p>
+        <ul className="space-y-3 text-surface-600">
+          <li>
+            <strong>Brand Strategy:</strong> Define brand purpose, vision, and values through market research.
+          </li>
+          <li>
+            <strong>Visual Identity:</strong> Develop logo, color palette, typography, and brand guidelines.
+          </li>
+          <li>
+            <strong>Brand Materials Supply:</strong> Business cards, brochures, flyers, promotional items, signage,
+            packaging design, and digital assets (social media templates, email newsletters).
+          </li>
+          <li>
+            <strong>Brand Messaging:</strong> Craft engaging taglines and cohesive content strategy.
+          </li>
+          <li>
+            <strong>Implementation and Monitoring:</strong> Oversee production and gather feedback.
+          </li>
+          <li>
+            <strong>Evaluation and Adaptation:</strong> Use brand awareness surveys and engagement metrics.
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    value: 'marketing-strategy',
+    title: 'Marketing Strategy',
+    content: (
+      <ul className="space-y-3 text-surface-600">
+        <li><strong>Benefits:</strong> A strategic approach to effectively reach target audiences and achieve business goals.</li>
+        <li><strong>Key Elements:</strong> Market Research, Customer Segmentation, Positioning, Marketing Channels, Campaign Development, Performance Metrics.</li>
+      </ul>
+    ),
+  },
+  {
+    value: 'digital-marketing',
+    title: 'Digital Marketing',
+    content: (
+      <ul className="space-y-3 text-surface-600">
+        <li><strong>Benefits:</strong> Enhances online presence, engages customers, and drives conversions.</li>
+        <li><strong>Services Include:</strong> Search Engine Optimization (SEO), Social Media Marketing, Content Marketing, Email Marketing, Pay-Per-Click Advertising (PPC).</li>
+      </ul>
+    ),
+  },
+  {
+    value: 'brand-awareness',
+    title: 'Brand Awareness and Engagement',
+    content: (
+      <ul className="space-y-3 text-surface-600">
+        <li><strong>Benefits:</strong> Strengthens customer relationships and drives brand loyalty.</li>
+        <li><strong>Tactics:</strong> Influencer Marketing, Public Relations Campaigns, Community Engagement, Event Promotion.</li>
+      </ul>
+    ),
+  },
+  {
+    value: 'web-design',
+    title: 'Web Design and Development',
+    content: (
+      <ul className="space-y-3 text-surface-600">
+        <li><strong>Benefits:</strong> Creates user-friendly, visually appealing websites that reflect your brand.</li>
+        <li><strong>Key Features:</strong> Custom Website Design, Responsive Design (Mobile & Desktop), E-commerce Integration, Content Management Systems (CMS), UX/UI Design, Performance Optimization and SEO.</li>
+      </ul>
+    ),
+  },
+  {
+    value: 'analytics',
+    title: 'Monitoring and Analytics',
+    content: (
+      <ul className="space-y-3 text-surface-600">
+        <li><strong>Benefits:</strong> Tracks performance and measures branding and marketing effectiveness.</li>
+        <li><strong>Methods:</strong> Web Analytics, Social Media Insights, Campaign Performance Metrics, Customer Feedback Analysis.</li>
+      </ul>
+    ),
+  },
+]
+
 export default function BrandingMarketing() {
   return (
-    <div className='py-8 px-4 bg-gray-50 sm:py-12 sm:px-6 lg:py-16 lg:px-8 xl:py-20'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12'>
-          {/* Content Section */}
-          <div className='p-4 sm:p-6 lg:p-8 order-2 lg:order-1'>
-            <Accordion type='single' collapsible>
-              <AccordionItem value='item-1'>
-                <AccordionTrigger className='text-2xl font-bold text-blue-700'>
-                  Branding Services
+    <div className="py-8">
+      <p className="text-surface-600 mb-8 max-w-3xl">
+        We help businesses build powerful brands and execute data-driven marketing strategies
+        that deliver measurable results.
+      </p>
+      <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="bg-white rounded-2xl p-6 shadow-sm">
+          <Accordion type="single" collapsible className="space-y-2">
+            {sections.map((s) => (
+              <AccordionItem key={s.value} value={s.value} className="border border-surface-200 rounded-xl px-5">
+                <AccordionTrigger className="text-lg font-semibold text-brand-700 hover:no-underline">
+                  {s.title}
                 </AccordionTrigger>
-                <AccordionContent>
-                  <h4 className='text-lg font-bold'>Objectives:</h4>
-                  <p className='mb-4'>
-                    Create a cohesive brand identity that resonates with your
-                    audiences.
-                  </p>
-
-                  <h4 className='text-lg font-bold mb-4'>Components:</h4>
-
-                  <ul className='list-disc pl-5 space-y-2'>
-                    <li>
-                      <span className='font-bold'>Brand Strategy:</span>{' '}
-                      <span>
-                        Define brand purpose, vision, and values through market
-                        research
-                      </span>
-                    </li>
-                    <li>
-                      <span className='font-bold'>Visual Identity:</span>{' '}
-                      <span>
-                        Develop essential elements such as logo, color palette,
-                        typography, and brand guidelines to ensure consistency.
-                      </span>
-                    </li>
-                    <li>
-                      <span className='font-bold'>Brand Materials Supply:</span>{' '}
-                      <span>Provide high-quality materials, including:</span>
-                      <ul className='list-disc pl-5 space-y-2'>
-                        <li>Business Cards</li>
-                        <li>Brochures and Flyers</li>
-                        <li>Promotional Items</li>
-                        <li>Signage</li>
-                        <li>Packaging Design</li>
-                        <li>
-                          Digital Assets(social media templates, email
-                          newsletters)
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <span className='font-bold'>Brand Messaging:</span>{' '}
-                      <span>
-                        Craft engaging taglines and a cohesive content strategy
-                        to convey the brand&;squo;s story.
-                      </span>
-                    </li>
-                    <li>
-                      <span className='font-bold'>
-                        Implementation and Monitoring:
-                      </span>{' '}
-                      <span>
-                        Oversee production and gather feedback to assess brand
-                        effectiveness.
-                      </span>
-                    </li>
-                    <li>
-                      <span className='font-bold'>
-                        Evaluation and Adaptation:
-                      </span>{' '}
-                      <span>
-                        Use brand awareness surveys and engagement metrics for
-                        continous improvement.
-                      </span>
-                    </li>
-                  </ul>
+                <AccordionContent className="text-sm">
+                  {s.content}
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value='item-2'>
-                <AccordionTrigger className='text-2xl font-bold text-blue-700'>
-                  Marketing Strategy
-                </AccordionTrigger>
-                <AccordionContent>
-                  <ul className='list-disc pl-5 space-y-2'>
-                    <li>
-                      <span className='font-bold'>Benefits:</span>
-                      <span>
-                        A strategic approach to effectively reach target
-                        audiences and achieve business goals.
-                      </span>
-                    </li>
-                    <li>
-                      <span className='font-bold'>Key Elements:</span>
-                      <span>
-                        Market Research, Customer Segmentation, Positioning,
-                        Marketing Channels, Campaign Development, Performance
-                        Metrics.
-                      </span>
-                    </li>
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value='item-3'>
-                <AccordionTrigger className='text-2xl font-bold text-blue-700'>
-                  Digital Marketing
-                </AccordionTrigger>
-                <AccordionContent>
-                  <ul className='list-disc pl-5 space-y-2'>
-                    <li>
-                      <span className='font-bold'>Benefits:</span>{' '}
-                      <span>
-                        Enhances online presence, engages customers, and drives
-                        conversions.
-                      </span>
-                    </li>
-                    <li>
-                      <span className='font-bold'>Services Include:</span>{' '}
-                      <ul className='list-disc pl-5 space-y-2'>
-                        <li>Search Engine Optimization (SEO)</li>
-                        <li>Social Media Marketing</li>
-                        <li>Content Marketing</li>
-                        <li>Email Marketing</li>
-                        <li>Pay-Per-Click Advertising (PPC)</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value='item-4'>
-                <AccordionTrigger className='text-2xl font-bold text-blue-700'>
-                  Brand Awareness and Engagement
-                </AccordionTrigger>
-                <AccordionContent>
-                  <ul className='list-disc pl-5 space-y-2'>
-                    <li>
-                      <span className='font-bold'>Benefits:</span>{' '}
-                      <span>
-                        Strengthens customer relationships and drives brand
-                        loyalty.
-                      </span>
-                    </li>
-                    <li>
-                      <span className='font-bold'>Tactics:</span>{' '}
-                      <span>
-                        Influencer Marketing, Public Relations Campaigns,
-                        Community Engagement, Event Promotion.
-                      </span>
-                    </li>
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value='item-5'>
-                <AccordionTrigger className='text-2xl font-bold text-blue-700'>
-                  Web Design and Development
-                </AccordionTrigger>
-                <AccordionContent>
-                  <ul className='list-disc pl-5 space-y-2'>
-                    <li>
-                      <span className='font-bold'>Benefits:</span>
-                      <span>
-                        Creates user-friendly, visually appealing websites that
-                        reflect your brand and enhance user experiences.
-                      </span>
-                    </li>
-                    <li>
-                      <span className='font-bold'>Key Features:</span>
-
-                      <ul className='list-disc pl-5 space-y-2'>
-                        <li>Custom Website Design</li>
-                        <li>Responsive Design for Mobile & Desktop</li>
-                        <li>E-commerce Integration</li>
-                        <li>Content Management Systems (CMS)</li>
-                        <li>
-                          User Experience (UX) and User Interface (UI) Design
-                        </li>
-                        <li>Performance Optimization and SEO Integration</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value='item-6'>
-                <AccordionTrigger className='text-2xl font-bold text-blue-700'>
-                  Monitoring and Analytics
-                </AccordionTrigger>
-                <AccordionContent>
-                  <ul className='list-disc pl-5 space-y-2'>
-                    <li>
-                      <span className='font-bold'>Benefits:</span>{' '}
-                      <span>
-                        Tracks Performance and measures the effectiveness of
-                        branding and marketing efforts.
-                      </span>
-                    </li>
-                    <li>
-                      <span className='font-bold'>Methods:</span>{' '}
-                      <span>
-                        Web Analytics, Social Media Insights, Campaign
-                        Performance Metrics, Customer Feedback Analysis.
-                      </span>
-                    </li>
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-
-          {/* Images Section */}
-          <div className='order-1 lg:order-2'>
-            <div className='flex flex-col gap-4 sm:gap-6'>
-              {/* Main Image */}
-              <div className='w-full'>
-                <Image
-                  src='/images/branding.jpg'
-                  alt='Plant Hire Equipment'
-                  width={600}
-                  height={600}
-                  className='w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] object-cover rounded-2xl'
-                />
-              </div>
-
-              {/* Two Smaller Images Side by Side */}
-              {/* <div className='grid grid-cols-2 gap-3 sm:gap-4'>
-                <Image
-                  src='/images/plant2.jpg'
-                  alt='Plant Hire Thumbnail 1'
-                  width={210}
-                  height={200}
-                  className='rounded-2xl object-cover w-full h-[120px] sm:h-[140px] md:h-[160px] lg:h-[180px]'
-                />
-                <Image
-                  src='/images/plant3.jpg'
-                  alt='Plant Hire Thumbnail 2'
-                  width={210}
-                  height={200}
-                  className='rounded-2xl object-cover w-full h-[120px] sm:h-[140px] md:h-[160px] lg:h-[180px]'
-                />
-              </div> */}
-            </div>
-          </div>
+            ))}
+          </Accordion>
+        </div>
+        <div className="relative">
+          <Image
+            src="/images/branding.jpg"
+            alt="Branding and Marketing Services"
+            width={600}
+            height={400}
+            className="w-full h-auto rounded-2xl shadow-sm object-cover"
+          />
         </div>
       </div>
     </div>

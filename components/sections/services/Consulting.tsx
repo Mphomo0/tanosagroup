@@ -1,18 +1,14 @@
-import React from 'react'
-
 import { consultingServices } from '@/lib/services'
 import Card from './Card'
 
 export default function Consulting() {
   return (
-    <div className='py-8 px-4 bg-gray-50 sm:py-12 sm:px-6 lg:py-16 lg:px-8 xl:py-20'>
-      <div className='max-w-7xl mx-auto'>
-        <h1 className='text-lg font-bold text-blue-700 sm:text-xl lg:text-2xl xl:text-3xl mb-3 sm:mb-4'>
-          Branding Services
-        </h1>
-      </div>
-
-      <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-4'>
+    <div className="py-8">
+      <p className="text-surface-600 mb-8 max-w-3xl">
+        Our consulting division provides expert analytical reviews, compliance monitoring,
+        and strategic guidance to municipalities and government departments across South Africa.
+      </p>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {consultingServices.map((service) => (
           <Card
             key={service.number}

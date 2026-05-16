@@ -1,62 +1,123 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'motion/react'
+import { ArrowRight, ChevronRight, CheckCircle2 } from 'lucide-react'
+
+const trustBadges = [
+  'Municipal Experts',
+  'Trusted Partner',
+  'Proven Results'
+]
 
 export default function Hero() {
   return (
-    <div className='relative h-screen overflow-hidden'>
-      {/* Background Pattern */}
-      <div className='absolute inset-0'>
-        <div className='relative h-full w-full [&>div]:absolute [&>div]:bottom-0 [&>div]:right-0 [&>div]:z-[-2] [&>div]:h-full [&>div]:w-full [&>div]:bg-gradient-to-b [&>div]:from-blue-200 [&>div]:to-white'>
-          <div></div>
-        </div>
-      </div>
+    <section className="relative min-h-[92vh] flex items-center overflow-hidden pt-24 pb-16 lg:pt-28 lg:pb-20">
+      <div className="absolute inset-0 bg-gradient-to-br from-surface-50 via-brand-50/30 to-surface-100 -z-10" />
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-100/40 rounded-full blur-[120px] -z-10" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-200/30 rounded-full blur-[100px] -z-10" />
+      <div className="absolute inset-0 bg-pattern opacity-40 -z-10" />
 
-      {/* Hero Content */}
-      <motion.div
-        className='relative z-10 flex h-screen md:h-full items-center justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.6,
-          ease: [0.42, 0, 1, 1], // You can also use custom Bezier: [0.42, 0, 1, 1]
-        }}
-      >
-        <div className='flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-8'>
-          {/* Left - Text Content */}
-          <div className='flex-1'>
-            <h1 className='mb-8 text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl text-slate-900'>
-              Tanosa&nbsp;
-              <span className='text-sky-900'>Group</span>
+      <div className="container-page w-full">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <motion.div
+            className="lg:col-span-7"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-surface-200/60 text-sm font-medium text-surface-700 mb-8 shadow-sm"
+            >
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500" />
+              </span>
+              <span className="text-surface-600">Trusted by municipalities across South Africa</span>
+            </motion.div>
+
+            <h1 className="text-5xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-surface-900 leading-[1.1] text-balance mb-6">
+              <span className="block">Tanosa</span>
+              <span className="block text-gradient">Group</span>
             </h1>
-            <p className='mb-8 text-lg text-slate-700'>
+
+            <p className="text-lg sm:text-xl text-surface-600 max-w-2xl leading-relaxed mb-8">
               We specialize in tailored solutions that drive growth and
               efficiency. Discover how our expertise in consulting, project
               management, and training can elevate your business.
             </p>
-            <div className='flex flex-wrap gap-4'>
-              <button className='rounded-lg px-6 py-3 font-medium bg-blue-600 text-white hover:bg-black'>
-                Get Started
-              </button>
-              <button className='rounded-lg border px-6 py-3 font-medium border-slate-200 bg-black text-white hover:bg-sky-800'>
-                Learn More
-              </button>
-            </div>
-          </div>
 
-          {/* Right - Image */}
-          <div className='flex-1'>
-            <Image
-              src='/images/transparent.png'
-              alt='Hero Illustration'
-              className='w-full h-full object-contain float-right'
-              width={800}
-              height={800}
-            />
-          </div>
+            <div className="flex flex-wrap gap-3 mb-10">
+              {trustBadges.map((badge, index) => (
+                <motion.div
+                  key={badge}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-sm border border-surface-200/50 text-sm font-medium text-surface-700"
+                >
+                  <CheckCircle2 className="w-4 h-4 text-brand-500" />
+                  {badge}
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="btn-premium rounded-2xl text-base"
+              >
+                <span className="flex items-center gap-2">
+                  Get Started
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </Link>
+              <Link
+                href="/services"
+                className="btn-outline rounded-2xl text-base"
+              >
+                <span className="flex items-center gap-2">
+                  Explore Services
+                  <ChevronRight className="w-4 h-4" />
+                </span>
+              </Link>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="lg:col-span-5 hidden lg:block"
+            initial={{ opacity: 0, scale: 0.95, x: 40 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+          >
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-br from-brand-200/50 via-brand-100/30 to-transparent rounded-3xl blur-2xl" />
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/50">
+                <Image
+                  src="/images/transparent.png"
+                  alt="Tanosa Group — Municipal governance and business solutions"
+                  width={800}
+                  height={800}
+                  priority
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+              <motion.div
+                className="absolute -bottom-6 -left-6 w-32 h-32 bg-white rounded-2xl shadow-xl border border-surface-100 p-4"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                <div className="text-3xl font-bold text-brand-600">15+</div>
+                <div className="text-sm text-surface-500">Years Experience</div>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </section>
   )
 }
