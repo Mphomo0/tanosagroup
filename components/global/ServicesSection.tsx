@@ -49,7 +49,7 @@ export default function ServicesSection() {
             <Sparkles className="w-4 h-4" />
             What We Offer
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-surface-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 mb-6">
             Our <span className="text-gradient">Services</span>
           </h2>
           <p className="text-lg text-surface-600 max-w-2xl mx-auto">
@@ -58,7 +58,7 @@ export default function ServicesSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon
             return (

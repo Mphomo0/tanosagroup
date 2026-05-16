@@ -51,10 +51,10 @@ export default function AboutSection() {
             <Sparkles className="w-4 h-4" />
             About Us
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-surface-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 mb-6">
             Who We <span className="text-gradient">Are</span>
           </h2>
-          <p className="text-lg text-surface-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-surface-600 max-w-3xl mx-auto leading-relaxed">
             Tanosa Group is a premier service provider specializing in governance,
             accountability, and operational improvement for municipalities across
             South Africa. With a multifaceted approach, we deliver an extensive
@@ -62,8 +62,8 @@ export default function AboutSection() {
           </p>
         </motion.div>
 
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-white rounded-2xl p-1.5 gap-1 shadow-lg shadow-surface-200/30 border border-surface-200/50">
+        <div className="overflow-x-auto pb-2 mb-10 -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div className="inline-flex bg-white rounded-2xl p-1.5 gap-1 shadow-lg shadow-surface-200/30 border border-surface-200/50 min-w-max">
             {tabs.map((tab) => {
               const Icon = tab.icon
               const isActive = activeTab === tab.id
@@ -71,7 +71,7 @@ export default function AboutSection() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
+                  className={`inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                     isActive
                       ? 'bg-brand-600 text-white shadow-md'
                       : 'text-surface-500 hover:text-surface-700 hover:bg-surface-50'
@@ -111,10 +111,10 @@ export default function AboutSection() {
           </div>
 
           <div className="order-1 lg:order-none space-y-6">
-            <h3 className="text-3xl sm:text-4xl font-bold text-surface-900 leading-tight">
+            <h3 className="text-2xl sm:text-3xl font-bold text-surface-900 leading-tight">
               {current.title}
             </h3>
-            <p className="text-surface-600 text-lg leading-relaxed">
+            <p className="text-surface-600 text-base sm:text-lg leading-relaxed">
               {current.content}
             </p>
             <div className="pt-4">

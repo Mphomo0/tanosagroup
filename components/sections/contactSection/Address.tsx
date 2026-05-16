@@ -39,7 +39,7 @@ export default function Address() {
         <div className="space-y-3 text-sm">
           <p className="flex items-start gap-3 text-surface-600">
             <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-brand-500" />
-            <span>789 Business Park, Bloemfontein, South Africa</span>
+            <span className="break-words">789 Business Park, Bloemfontein, South Africa</span>
           </p>
           <p className="flex items-center gap-3 text-surface-600">
             <Phone className="w-4 h-4 shrink-0 text-brand-500" />
@@ -69,7 +69,7 @@ export default function Address() {
             </p>
             <p className="flex items-center gap-3 text-surface-600">
               <Mail className="w-4 h-4 shrink-0 text-brand-500" />
-              <a href={`mailto:${contact.email}`} className="hover:text-brand-600 transition-colors">
+              <a href={`mailto:${contact.email}`} className="hover:text-brand-600 transition-colors break-all">
                 {contact.email}
               </a>
             </p>

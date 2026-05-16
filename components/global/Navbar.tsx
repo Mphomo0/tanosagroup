@@ -90,13 +90,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="lg:hidden flex items-center gap-3">
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-white transition-all duration-300"
-          >
-            Get a Quote
-          </Link>
+        <div className="lg:hidden flex items-center">
           <button
             onClick={toggleMobileMenu}
             className="p-2.5 rounded-full text-surface-600 hover:text-surface-900 hover:bg-surface-100 transition-all duration-200"

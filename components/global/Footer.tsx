@@ -95,7 +95,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3.5 text-sm group">
                 <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-brand-400 group-hover:text-brand-300 transition-colors" />
-                <span className="text-surface-400 group-hover:text-surface-300 transition-colors">37 Zastron Street, Bloemfontein Central, Bloemfontein, 9301</span>
+                <span className="text-surface-400 group-hover:text-surface-300 transition-colors break-words">37 Zastron Street, Bloemfontein Central, Bloemfontein, 9301</span>
               </li>
               <li className="flex items-center gap-3.5 text-sm group">
                 <Phone className="w-5 h-5 shrink-0 text-brand-400 group-hover:text-brand-300 transition-colors" />

@@ -40,7 +40,7 @@ export default function Hero() {
               <span className="text-surface-600">Trusted by municipalities across South Africa</span>
             </motion.div>
 
-            <h1 className="text-5xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-surface-900 leading-[1.1] text-balance mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-surface-900 leading-[1.15] text-balance mb-6">
               <span className="block">Tanosa</span>
               <span className="block text-gradient">Group</span>
             </h1>
@@ -51,17 +51,17 @@ export default function Hero() {
               management, and training can elevate your business.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mb-8">
               {trustBadges.map((badge, index) => (
                 <motion.div
                   key={badge}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-sm border border-surface-200/50 text-sm font-medium text-surface-700"
+                  className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/70 backdrop-blur-sm border border-surface-200/50 text-xs sm:text-sm font-medium text-surface-700 whitespace-nowrap"
                 >
-                  <CheckCircle2 className="w-4 h-4 text-brand-500" />
-                  {badge}
+                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-500" />
+                  <span className="hidden xs:inline">{badge}</span>
                 </motion.div>
               ))}
             </div>

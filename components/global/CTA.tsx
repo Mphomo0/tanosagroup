@@ -21,7 +21,7 @@ export default function CTA() {
             <MessageCircle className="w-4 h-4" />
             Let&apos;s Connect
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight text-balance mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight text-balance mb-6">
             Ready for Accountability
             <span className="text-gradient bg-gradient-to-r from-brand-300 to-brand-400"> Excellence?</span>
           </h2>

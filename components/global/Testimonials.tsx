@@ -39,7 +39,7 @@ export default function Testimonials() {
             <Sparkles className="w-4 h-4" />
             Testimonials
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-surface-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 mb-6">
             What Our <span className="text-gradient">Clients Say</span>
           </h2>
           <p className="text-lg text-surface-600 max-w-2xl mx-auto">
@@ -47,7 +47,7 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {reviews.map((item, index) => (
             <motion.div
               key={item.id}
