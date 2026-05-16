@@ -5,11 +5,7 @@ import Link from 'next/link'
 import { motion } from 'motion/react'
 import { ArrowRight, ChevronRight, CheckCircle2 } from 'lucide-react'
 
-const trustBadges = [
-  'Municipal Experts',
-  'Trusted Partner',
-  'Proven Results'
-]
+const trustBadges = ['Municipal Experts', 'Trusted Partner', 'Proven Results']
 
 export default function Hero() {
   return (
@@ -37,12 +33,15 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500" />
               </span>
-              <span className="text-surface-600">Trusted by municipalities across South Africa</span>
+              <span className="text-surface-600">
+                Trusted by municipalities across South Africa
+              </span>
             </motion.div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-surface-900 leading-[1.15] text-balance mb-6">
-              <span className="block">Tanosa</span>
-              <span className="block text-gradient">Group</span>
+            <h1 className="text-6xl sm:text-6xl lg:text-5xl xl:text-6xl font-bold text-surface-900 leading-[1.15] text-balance mb-6">
+              <span className="block">
+                Tanosa <span className=" text-gradient">Group</span>
+              </span>
             </h1>
 
             <p className="text-lg sm:text-xl text-surface-600 max-w-2xl leading-relaxed mb-8">
@@ -66,21 +65,21 @@ export default function Hero() {
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
               <Link
                 href="/contact"
-                className="btn-premium rounded-2xl text-base"
+                className="btn-premium rounded-2xl text-base w-full sm:w-auto justify-center"
               >
-                <span className="flex items-center gap-2">
+                <span className="flex items-center justify-center gap-2">
                   Get Started
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
               <Link
                 href="/services"
-                className="btn-outline rounded-2xl text-base"
+                className="btn-outline rounded-2xl text-base w-full sm:w-auto justify-center"
               >
-                <span className="flex items-center gap-2">
+                <span className="flex items-center justify-center gap-2">
                   Explore Services
                   <ChevronRight className="w-4 h-4" />
                 </span>
@@ -92,7 +91,11 @@ export default function Hero() {
             className="lg:col-span-5 hidden lg:block"
             initial={{ opacity: 0, scale: 0.95, x: 40 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{
+              duration: 0.8,
+              delay: 0.2,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
           >
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-brand-200/50 via-brand-100/30 to-transparent rounded-3xl blur-2xl" />
@@ -109,7 +112,11 @@ export default function Hero() {
               <motion.div
                 className="absolute -bottom-6 -left-6 w-32 h-32 bg-white rounded-2xl shadow-xl border border-surface-100 p-4"
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
               >
                 <div className="text-3xl font-bold text-brand-600">15+</div>
                 <div className="text-sm text-surface-500">Years Experience</div>
