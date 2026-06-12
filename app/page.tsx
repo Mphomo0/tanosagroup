@@ -5,14 +5,29 @@ import ServicesSection from '@/components/global/ServicesSection'
 import Testimonials from '@/components/global/Testimonials'
 import CTA from '@/components/global/CTA'
 
+const baseUrl = 'https://www.tanosagroup.com'
+
 export const metadata: Metadata = {
-  title: 'Tanosa Group — Municipal Governance & Business Solutions, Bloemfontein',
+  title: { absolute: 'Municipal Governance Consulting | Tanosa Group' },
   description:
-    'Premier South African consultancy specializing in municipal governance, accountability, operational improvement, business development, and plant hire services in Bloemfontein and across South Africa.',
+    'Municipal governance consultancy in Bloemfontein, South Africa. Expert MPAC support, risk management, accountability, business development, and plant hire.',
+  alternates: { canonical: baseUrl },
   openGraph: {
-    title: 'Tanosa Group — Municipal Governance & Business Solutions',
+    title: 'Municipal Governance Consulting | Tanosa Group',
     description:
-      'Premier South African consultancy specializing in governance, accountability, and operational improvement for municipalities.',
+      'Municipal governance consultancy in Bloemfontein, South Africa. Expert MPAC support, risk management, accountability, business development, and plant hire.',
+    url: baseUrl,
+    siteName: 'Tanosa Group',
+    locale: 'en_ZA',
+    type: 'website',
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png`, alt: 'Tanosa Group' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Municipal Governance Consulting | Tanosa Group',
+    description:
+      'Municipal governance consultancy in Bloemfontein, South Africa. Expert MPAC support, risk management, accountability, business development, and plant hire.',
+    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
   },
 }
 

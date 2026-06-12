@@ -39,13 +39,19 @@ export default function Footer() {
               we deliver an extensive array of professional services.
             </p>
             <div className="flex gap-3">
-              {['facebook', 'twitter', 'linkedin'].map((social) => (
+              {[
+                { id: 'facebook', href: 'https://www.facebook.com/tanosagroup/' },
+                { id: 'linkedin', href: 'https://www.linkedin.com/company/tanosa-group/' },
+              ].map((social) => (
                 <a
-                  key={social}
-                  href="#"
+                  key={social.id}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Tanosa Group on ${social.id}`}
                   className="w-10 h-10 rounded-xl bg-surface-800/50 hover:bg-brand-600 flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
                 >
-                  <span className="text-xs font-bold text-white/80">{social.charAt(0).toUpperCase()}</span>
+                  <span className="text-xs font-bold text-white/80">{social.id.charAt(0).toUpperCase()}</span>
                 </a>
               ))}
             </div>

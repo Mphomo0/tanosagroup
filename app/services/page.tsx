@@ -16,15 +16,52 @@ import BrandingMarketing from '@/components/sections/services/BrandingMarketing'
 import PlantHire from '@/components/sections/services/PlantHire'
 import AdditionalServices from '@/components/sections/services/AdditionalServices'
 
+const pageUrl = 'https://www.tanosagroup.com/services'
+const baseUrl = 'https://www.tanosagroup.com'
+
 export const metadata: Metadata = {
-  title: 'Our Services',
+  title: { absolute: 'Consulting & Municipal Services | Tanosa Group' },
   description:
-    'Comprehensive consulting, business development, branding, plant hire, and additional services from Tanosa Group. Serving municipalities and businesses across South Africa.',
+    'Expert consulting, business development, branding, and plant hire from Tanosa Group. Serving municipalities and businesses across South Africa.',
+  alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'Our Services — Tanosa Group',
+    title: 'Consulting & Municipal Services | Tanosa Group',
     description:
-      'Expert consulting, business development, branding, plant hire, and specialized municipal services across South Africa.',
+      'Expert consulting, business development, branding, and plant hire from Tanosa Group. Serving municipalities and businesses across South Africa.',
+    url: pageUrl,
+    siteName: 'Tanosa Group',
+    locale: 'en_ZA',
+    type: 'website',
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png`, alt: 'Tanosa Group' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Consulting & Municipal Services | Tanosa Group',
+    description:
+      'Expert consulting, business development, branding, and plant hire from Tanosa Group. Serving municipalities and businesses across South Africa.',
+    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+  },
+}
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      name: 'Municipal Governance Consulting',
+      serviceType: 'Municipal Governance Consulting',
+      provider: { '@id': `${baseUrl}/#organization` },
+      areaServed: 'South Africa',
+      url: pageUrl,
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: pageUrl },
+      ],
+    },
+  ],
 }
 
 const tabsData = [
@@ -38,7 +75,11 @@ const tabsData = [
 export default function ServicesPage() {
   return (
     <>
-      <PageHero 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <PageHero
         badge="What We Offer"
         title={<><span className="text-gradient">Services</span></>}
         subtitle="Comprehensive solutions tailored to drive your business forward with expertise across multiple domains."

@@ -17,11 +17,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Tanosa Group — Municipal Governance & Business Solutions, Bloemfontein',
-    template: '%s — Tanosa Group',
+    default: 'Municipal Governance & Business Solutions | Tanosa Group',
+    template: '%s | Tanosa Group',
   },
   description:
-    'Premier South African consultancy specializing in municipal governance, accountability, operational improvement, business development, and plant hire services in Bloemfontein and across South Africa.',
+    'Municipal governance consultancy in Bloemfontein, South Africa. Expert MPAC support, risk management, accountability, business development, and plant hire.',
   keywords: [
     'municipal consulting South Africa',
     'MPAC support',
@@ -35,19 +35,21 @@ export const metadata: Metadata = {
     'Tanosa Group',
   ],
   openGraph: {
-    title: 'Tanosa Group — Municipal Governance & Business Solutions',
+    title: 'Municipal Governance Consulting | Tanosa Group',
     description:
-      'Premier South African consultancy specializing in municipal governance, accountability, operational improvement, and business development.',
+      'Municipal governance consultancy in Bloemfontein, South Africa. Expert MPAC support, risk management, accountability, business development, and plant hire.',
     url: baseUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'website',
+    images: [{ url: '/images/Tanosa_Group_logo.png', alt: 'Tanosa Group' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tanosa Group',
+    title: 'Municipal Governance Consulting | Tanosa Group',
     description:
-      'Municipal governance, accountability, and operational improvement consultancy based in Bloemfontein, South Africa.',
+      'Municipal governance consultancy in Bloemfontein, South Africa. Expert MPAC support, risk management, accountability, business development, and plant hire.',
+    images: ['/images/Tanosa_Group_logo.png'],
   },
   robots: {
     index: true,
@@ -71,8 +73,13 @@ const jsonLd = {
       name: 'Tanosa Group',
       url: baseUrl,
       logo: `${baseUrl}/images/Tanosa_Group_logo.png`,
+      foundingDate: '2009',
       description:
         'Premier service provider specializing in governance, accountability, and operational improvement for municipalities across South Africa.',
+      sameAs: [
+        'https://www.facebook.com/tanosagroup/',
+        'https://www.linkedin.com/company/tanosa-group/',
+      ],
       address: {
         '@type': 'PostalAddress',
         streetAddress: '37 Zastron Street, Bloemfontein Central',
@@ -82,13 +89,36 @@ const jsonLd = {
         addressCountry: 'ZA',
       },
       contactPoint: [
-        { '@type': 'ContactPoint', telephone: '+27-79-596-6442', contactType: 'general', email: 'tanosatrading@gmail.com' },
-        { '@type': 'ContactPoint', telephone: '+27-84-256-4559', contactType: 'sales', name: 'Vormmia Sikaundi' },
-        { '@type': 'ContactPoint', telephone: '+27-61-172-3709', contactType: 'sales', name: 'Elizabeth Motsilili' },
+        {
+          '@type': 'ContactPoint',
+          telephone: '+27-79-596-6442',
+          contactType: 'general',
+          email: 'tanosatrading@gmail.com',
+        },
+        {
+          '@type': 'ContactPoint',
+          telephone: '+27-84-256-4559',
+          contactType: 'sales',
+          name: 'Vormmia Sikaundi',
+        },
+        {
+          '@type': 'ContactPoint',
+          telephone: '+27-61-172-3709',
+          contactType: 'sales',
+          name: 'Elizabeth Motsilili',
+        },
       ],
       founder: [
-        { '@type': 'Person', name: 'Vormmia Sikaundi', jobTitle: 'Managing Director' },
-        { '@type': 'Person', name: 'Elizabeth Motsilili', jobTitle: 'Director' },
+        {
+          '@type': 'Person',
+          name: 'Vormmia Sikaundi',
+          jobTitle: 'Managing Director',
+        },
+        {
+          '@type': 'Person',
+          name: 'Elizabeth Motsilili',
+          jobTitle: 'Director',
+        },
       ],
       knowsAbout: [
         'Municipal Governance',
@@ -104,6 +134,13 @@ const jsonLd = {
         'ICT Systems',
         'Plant Hire',
       ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${baseUrl}/#website`,
+      name: 'Tanosa Group',
+      url: baseUrl,
+      publisher: { '@id': `${baseUrl}/#organization` },
     },
     {
       '@type': 'LocalBusiness',
@@ -128,9 +165,11 @@ const jsonLd = {
   ],
 }
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en-ZA">
       <head>
         <script
           type="application/ld+json"

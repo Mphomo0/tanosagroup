@@ -4,21 +4,50 @@ import AboutSection from '@/components/global/AboutSection'
 import CTA from '@/components/global/CTA'
 import Testimonials from '@/components/global/Testimonials'
 
+const pageUrl = 'https://www.tanosagroup.com/about'
+const baseUrl = 'https://www.tanosagroup.com'
+
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: { absolute: 'About Tanosa Group | Governance Consultants' },
   description:
-    'Learn about Tanosa Group — our journey, mission, and vision. Founded to deliver impactful solutions in municipal governance, accountability, and operational improvement across South Africa.',
+    'Learn about Tanosa Group — our journey, mission, and vision. Founded to deliver impactful solutions in municipal governance and operational improvement, SA.',
+  alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'About Us — Tanosa Group',
+    title: 'About Tanosa Group | Governance Consultants',
     description:
-      'Our journey of growth and innovation in municipal governance and business solutions across South Africa.',
+      'Learn about Tanosa Group — our journey, mission, and vision. Founded to deliver impactful solutions in municipal governance and operational improvement, SA.',
+    url: pageUrl,
+    siteName: 'Tanosa Group',
+    locale: 'en_ZA',
+    type: 'website',
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png`, alt: 'Tanosa Group' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Tanosa Group | Governance Consultants',
+    description:
+      'Learn about Tanosa Group — our journey, mission, and vision. Founded to deliver impactful solutions in municipal governance and operational improvement, SA.',
+    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+  },
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+    { '@type': 'ListItem', position: 2, name: 'About Us', item: pageUrl },
+  ],
 }
 
 export default function About() {
   return (
     <>
-      <PageHero 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <PageHero
         badge="About Us"
         title={<><span className="text-gradient">Story</span></>}
         subtitle="Learn about Tanosa Group — our journey, mission, and vision. Founded to deliver impactful solutions in municipal governance, accountability, and operational improvement across South Africa."
