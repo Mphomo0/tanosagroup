@@ -8,14 +8,14 @@ import CTA from '@/components/global/CTA'
 const baseUrl = 'https://www.tanosagroup.com'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Municipal Governance Consulting | Tanosa Group' },
+  title: { absolute: 'Accounting, Tax & Business Consulting | Tanosa Group' },
   description:
-    'Municipal governance consultancy in Bloemfontein, South Africa. Expert MPAC support, risk management, accountability, business development, and plant hire.',
+    'Expert accounting, tax returns, business registration, and consulting in Bloemfontein, Free State. Serving startups, SMEs, and municipalities since 2009.',
   alternates: { canonical: baseUrl },
   openGraph: {
-    title: 'Municipal Governance Consulting | Tanosa Group',
+    title: 'Accounting, Tax & Business Consulting | Tanosa Group',
     description:
-      'Municipal governance consultancy in Bloemfontein, South Africa. Expert MPAC support, risk management, accountability, business development, and plant hire.',
+      'Expert accounting, tax returns, business registration, and consulting in Bloemfontein, Free State. Serving startups, SMEs, and municipalities since 2009.',
     url: baseUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Municipal Governance Consulting | Tanosa Group',
+    title: 'Accounting, Tax & Business Consulting | Tanosa Group',
     description:
-      'Municipal governance consultancy in Bloemfontein, South Africa. Expert MPAC support, risk management, accountability, business development, and plant hire.',
+      'Expert accounting, tax returns, business registration, and consulting in Bloemfontein, Free State. Serving startups, SMEs, and municipalities since 2009.',
     images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
   },
 }

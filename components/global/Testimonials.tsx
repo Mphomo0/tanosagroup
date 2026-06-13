@@ -16,7 +16,7 @@ const reviews = [
     name: 'Tshese Ralepoma',
     position: 'Business Owner',
     rating: 5,
-    review: '',
+    review: '"Excellent service provider with professional and reliable delivery."',
   },
 ]
 

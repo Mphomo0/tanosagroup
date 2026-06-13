@@ -3,20 +3,17 @@ import nodemailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
   try {
-    // Get form data from the contact form
     const { name, email, phone, website, company, subject, message } =
       await req.json()
 
-    // Create the transporter using Gmail's SMTP server
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.GMAIL_USER, // Your Gmail email address
-        pass: process.env.GMAIL_PASS, // Your App Password (not your Gmail password)
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS,
       },
     })
 
-    // Create HTML email content
     const htmlContent = `
       <h2>New Contact Form Submission</h2>
       <p><strong>Name:</strong> ${name}</p>
@@ -29,12 +26,11 @@ export async function POST(req: NextRequest) {
       <p>${message.replace(/\n/g, '<br>')}</p>
     `
 
-    // Define email options
     const mailOptions = {
-      from: process.env.GMAIL_USER, // sender address
-      to: process.env.GMAIL_USER, // send to yourself
-      replyTo: email, // so you can reply directly to the sender
-      subject: `Contact Form: ${subject}`, // subject line
+      from: process.env.GMAIL_USER,
+      to: process.env.GMAIL_USER,
+      replyTo: email,
+      subject: `Contact Form: ${subject}`,
       text: `
         New contact form submission:
         
@@ -47,11 +43,10 @@ export async function POST(req: NextRequest) {
         
         Message:
         ${message}
-      `, // plain text body
-      html: htmlContent, // html body
+      `,
+      html: htmlContent,
     }
 
-    // Send email
     await transporter.sendMail(mailOptions)
 
     return new Response(

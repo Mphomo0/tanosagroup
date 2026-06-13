@@ -25,7 +25,7 @@ const tabContent: Record<string, { title: string; content: string }> = {
   'Our Story': {
     title: 'Our Journey of Growth and Innovation',
     content:
-      'Founded with a vision to deliver impactful solutions, Tanosa Group has earned a reputation for reliability and innovation. Our dedicated team combines industry expertise with practical solutions to serve clients effectively in the Private Sector, Government Department and Municipalities.',
+      'Founded with a vision to deliver impactful solutions, Tanosa Group has earned a reputation for reliability and innovation. Our dedicated team combines industry expertise with practical solutions in accounting, tax, business registration, consulting, and municipal governance to serve clients across the Private Sector, Government Departments, and Municipalities.',
   },
 }
 
@@ -55,10 +55,10 @@ export default function AboutSection() {
             Who We <span className="text-gradient">Are</span>
           </h2>
           <p className="text-base sm:text-lg text-surface-600 max-w-3xl mx-auto leading-relaxed">
-            Tanosa Group is a premier service provider specializing in governance,
-            accountability, and operational improvement for municipalities across
+            Tanosa Group is a premier service provider specializing in accounting,
+            tax, business registration, consulting, and municipal governance across
             South Africa. With a multifaceted approach, we deliver an extensive
-            array of professional services.
+            array of professional services to businesses and government clients.
           </p>
         </motion.div>
 

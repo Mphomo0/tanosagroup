@@ -10,6 +10,7 @@ import {
 import PageHero from '@/components/global/PageHero'
 import CTA from '@/components/global/CTA'
 import Testimonials from '@/components/global/Testimonials'
+import FAQSection from '@/components/global/FAQSection'
 import Consulting from '@/components/sections/services/Consulting'
 import BusinessDevelopment from '@/components/sections/services/BusinessDevelopment'
 import BrandingMarketing from '@/components/sections/services/BrandingMarketing'
@@ -20,14 +21,14 @@ const pageUrl = 'https://www.tanosagroup.com/services'
 const baseUrl = 'https://www.tanosagroup.com'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Consulting & Municipal Services | Tanosa Group' },
+  title: { absolute: 'Accounting, Tax & Business Services | Tanosa Group' },
   description:
-    'Expert consulting, business development, branding, and plant hire from Tanosa Group. Serving municipalities and businesses across South Africa.',
+    'Accounting, tax returns, business registration, consulting, training, and branding services in Bloemfontein, Free State. Serving SMEs and municipalities across South Africa.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'Consulting & Municipal Services | Tanosa Group',
+    title: 'Accounting, Tax & Business Services | Tanosa Group',
     description:
-      'Expert consulting, business development, branding, and plant hire from Tanosa Group. Serving municipalities and businesses across South Africa.',
+      'Accounting, tax returns, business registration, consulting, training, and branding services in Bloemfontein, Free State. Serving SMEs and municipalities across South Africa.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
@@ -36,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Consulting & Municipal Services | Tanosa Group',
+    title: 'Accounting, Tax & Business Services | Tanosa Group',
     description:
-      'Expert consulting, business development, branding, and plant hire from Tanosa Group. Serving municipalities and businesses across South Africa.',
+      'Accounting, tax returns, business registration, consulting, training, and branding services in Bloemfontein, Free State.',
     images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
   },
 }
@@ -48,11 +49,22 @@ const pageSchema = {
   '@graph': [
     {
       '@type': 'Service',
-      name: 'Municipal Governance Consulting',
-      serviceType: 'Municipal Governance Consulting',
+      name: 'Tanosa Group Services',
+      description: 'Accounting, tax, business registration, consulting, training, branding, and marketing services in Bloemfontein, Free State.',
       provider: { '@id': `${baseUrl}/#organization` },
-      areaServed: 'South Africa',
+      areaServed: ['Bloemfontein', 'Botshabelo', 'Thaba Nchu', 'Zastron', 'QwaQwa', 'Free State', 'South Africa'],
       url: pageUrl,
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Tanosa Group Services',
+        itemListElement: [
+          { '@type': 'Offer', name: 'Accounting & Tax Services', url: `${baseUrl}/services/accounting-tax` },
+          { '@type': 'Offer', name: 'Business Registration', url: `${baseUrl}/services/business-registration` },
+          { '@type': 'Offer', name: 'Consulting', url: `${baseUrl}/services/consulting` },
+          { '@type': 'Offer', name: 'Training', url: `${baseUrl}/services/training` },
+          { '@type': 'Offer', name: 'Branding & Marketing', url: `${baseUrl}/services/branding-marketing` },
+        ],
+      },
     },
     {
       '@type': 'BreadcrumbList',
@@ -123,6 +135,16 @@ export default function ServicesPage() {
         </Tabs>
       </div>
 
+      <FAQSection
+        title="Frequently Asked Questions"
+        subtitle="Common questions about our services."
+        items={[
+          { question: 'What services does Tanosa Group offer?', answer: 'We offer accounting, tax returns, business registration, consulting, training, branding and marketing services. We serve clients across Bloemfontein, Free State, and South Africa.' },
+          { question: 'Do you serve small businesses in Bloemfontein?', answer: 'Yes. We specialize in helping startups and small businesses with accounting, tax compliance, business registration, and consulting.' },
+          { question: 'How do I get a quote?', answer: 'Contact us via phone at 079 596 6442, email us at tanosatrading@gmail.com, or fill out our contact form. We will respond within 24 hours.' },
+          { question: 'Where are you located?', answer: 'Our office is at 37 Zastron Street, Bloemfontein Central, Bloemfontein, 9301. We also serve clients in Botshabelo, Thaba Nchu, Zastron, and QwaQwa.' },
+        ]}
+      />
       <CTA />
       <Testimonials />
     </>

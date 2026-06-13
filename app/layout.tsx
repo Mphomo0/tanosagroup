@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/global/Navbar'
 import Footer from '@/components/global/Footer'
+import WhatsAppButton from '@/components/global/WhatsAppButton'
+import Analytics from '@/components/global/Analytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,27 +19,32 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Municipal Governance & Business Solutions | Tanosa Group',
+    default: 'Accounting, Tax & Business Consulting | Tanosa Group',
     template: '%s | Tanosa Group',
   },
   description:
-    'Municipal governance consultancy in Bloemfontein, South Africa. Expert MPAC support, risk management, accountability, business development, and plant hire.',
+    'Accounting services, tax returns, business registration, and consulting in Bloemfontein, Free State. Serving startups, SMEs, and municipalities across South Africa.',
   keywords: [
+    'accounting services Bloemfontein',
+    'tax return South Africa',
+    'business registration South Africa',
+    'accountant Bloemfontein',
     'municipal consulting South Africa',
-    'MPAC support',
-    'governance consulting Bloemfontein',
-    'business development',
+    'business consulting Free State',
+    'tax consultant Bloemfontein',
+    'small business accounting',
+    'startup business registration',
     'project management',
-    'plant hire',
-    'risk management',
-    'municipal finance',
     'training and capacity building',
     'Tanosa Group',
+    'bookkeeping Bloemfontein',
+    'SARS tax return',
+    'CIPC business registration',
   ],
   openGraph: {
-    title: 'Municipal Governance Consulting | Tanosa Group',
+    title: 'Accounting, Tax & Business Consulting | Tanosa Group',
     description:
-      'Municipal governance consultancy in Bloemfontein, South Africa. Expert MPAC support, risk management, accountability, business development, and plant hire.',
+      'Accounting services, tax returns, business registration, and consulting in Bloemfontein, Free State. Serving startups, SMEs, and municipalities across South Africa.',
     url: baseUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
@@ -46,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Municipal Governance Consulting | Tanosa Group',
+    title: 'Accounting, Tax & Business Consulting | Tanosa Group',
     description:
-      'Municipal governance consultancy in Bloemfontein, South Africa. Expert MPAC support, risk management, accountability, business development, and plant hire.',
+      'Accounting services, tax returns, business registration, and consulting in Bloemfontein, Free State. Serving startups, SMEs, and municipalities across South Africa.',
     images: ['/images/Tanosa_Group_logo.png'],
   },
   robots: {
@@ -75,7 +82,7 @@ const jsonLd = {
       logo: `${baseUrl}/images/Tanosa_Group_logo.png`,
       foundingDate: '2009',
       description:
-        'Premier service provider specializing in governance, accountability, and operational improvement for municipalities across South Africa.',
+        'Accounting, tax, business registration, and consulting services in Bloemfontein, Free State. Serving startups, SMEs, and municipalities across South Africa.',
       sameAs: [
         'https://www.facebook.com/tanosagroup/',
         'https://www.linkedin.com/company/tanosa-group/',
@@ -121,6 +128,11 @@ const jsonLd = {
         },
       ],
       knowsAbout: [
+        'Accounting Services',
+        'Tax Returns',
+        'Business Registration',
+        'Bookkeeping',
+        'Payroll',
         'Municipal Governance',
         'Public Accounts Committee Support',
         'Risk Management',
@@ -151,6 +163,7 @@ const jsonLd = {
       url: baseUrl,
       telephone: '+27-79-596-6442',
       email: 'tanosatrading@gmail.com',
+      priceRange: 'R',
       address: {
         '@type': 'PostalAddress',
         streetAddress: '37 Zastron Street, Bloemfontein Central',
@@ -159,8 +172,41 @@ const jsonLd = {
         postalCode: '9301',
         addressCountry: 'ZA',
       },
-      areaServed: 'South Africa',
-      priceRange: 'R',
+      areaServed: [
+        {
+          '@type': 'City',
+          name: 'Bloemfontein',
+          sameAs: 'https://en.wikipedia.org/wiki/Bloemfontein',
+        },
+        {
+          '@type': 'City',
+          name: 'Botshabelo',
+          sameAs: 'https://en.wikipedia.org/wiki/Botshabelo',
+        },
+        {
+          '@type': 'City',
+          name: 'Thaba Nchu',
+          sameAs: 'https://en.wikipedia.org/wiki/Thaba_Nchu',
+        },
+        {
+          '@type': 'City',
+          name: 'Zastron',
+          sameAs: 'https://en.wikipedia.org/wiki/Zastron',
+        },
+        {
+          '@type': 'City',
+          name: 'QwaQwa',
+          sameAs: 'https://en.wikipedia.org/wiki/QwaQwa',
+        },
+      ],
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '08:00',
+          closes: '17:00',
+        },
+      ],
     },
   ],
 }
@@ -180,6 +226,8 @@ export default function RootLayout({
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <WhatsAppButton />
+        <Analytics />
       </body>
     </html>
   )

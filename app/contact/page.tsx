@@ -7,14 +7,14 @@ const pageUrl = 'https://www.tanosagroup.com/contact'
 const baseUrl = 'https://www.tanosagroup.com'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Contact Tanosa Group | Bloemfontein, SA' },
+  title: { absolute: 'Contact Tanosa Group | Bloemfontein, Free State' },
   description:
-    'Get in touch with Tanosa Group. Contact our team in Bloemfontein for consulting inquiries, quotes, and collaboration opportunities.',
+    'Contact Tanosa Group for accounting, tax returns, business registration, and consulting in Bloemfontein. Call 079 596 6442 or email tanosatrading@gmail.com.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'Contact Tanosa Group | Bloemfontein, SA',
+    title: 'Contact Tanosa Group | Bloemfontein, Free State',
     description:
-      'Get in touch with Tanosa Group. Contact our team in Bloemfontein for consulting inquiries, quotes, and collaboration opportunities.',
+      'Contact Tanosa Group for accounting, tax returns, business registration, and consulting in Bloemfontein. Call 079 596 6442.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Tanosa Group | Bloemfontein, SA',
+    title: 'Contact Tanosa Group | Bloemfontein, Free State',
     description:
-      'Get in touch with Tanosa Group. Contact our team in Bloemfontein for consulting inquiries, quotes, and collaboration opportunities.',
+      'Contact Tanosa Group for accounting, tax returns, business registration, and consulting in Bloemfontein.',
     images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
   },
 }

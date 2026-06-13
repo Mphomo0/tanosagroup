@@ -22,12 +22,13 @@ export default function CTA() {
             Let&apos;s Connect
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight text-balance mb-6">
-            Ready for Accountability
-            <span className="text-gradient bg-gradient-to-r from-brand-300 to-brand-400"> Excellence?</span>
+            Ready to Grow Your
+            <span className="text-gradient bg-gradient-to-r from-brand-300 to-brand-400"> Business?</span>
           </h2>
           <p className="text-lg text-surface-300 max-w-xl leading-relaxed mb-10">
-            Have Questions? We&apos;re Here to Help. Get in touch with our team
-            and let&apos;s discuss how we can support your municipality or business.
+            Have Questions? We&apos;re Here to Help. Whether you need accounting,
+            tax returns, business registration, or consulting, our team is ready
+            to support you.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Link

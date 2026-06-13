@@ -34,7 +34,7 @@ export default function Hero() {
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500" />
               </span>
               <span className="text-surface-600">
-                Trusted by municipalities across South Africa
+                Trusted by businesses &amp; municipalities across South Africa
               </span>
             </motion.div>
 
@@ -45,9 +45,9 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg sm:text-xl text-surface-600 max-w-2xl leading-relaxed mb-8">
-              We specialize in tailored solutions that drive growth and
-              efficiency. Discover how our expertise in consulting, project
-              management, and training can elevate your business.
+              Accounting, tax, business registration, and consulting services
+              for businesses and municipalities across Bloemfontein and the
+              Free State. Let us help you grow.
             </p>
 
             <div className="flex flex-wrap gap-2 sm:gap-3 mb-8">
