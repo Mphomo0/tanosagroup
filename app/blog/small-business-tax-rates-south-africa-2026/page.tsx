@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/small-business-tax-rates-south-africa-2026'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Small Business Tax Rates in South Africa 2026/2027: Complete Guide | Tanosa Group' },
-  description: 'Small business tax rates in South Africa for 2026/2027. SBC rates, corporate tax, turnover tax, personal income tax brackets, and VAT thresholds. Updated tables and examples.',
+  title: { absolute: 'Small Business Tax Rates SA 2026/2027 | Tanosa Group' },
+  description: 'Small business tax rates in South Africa for 2026/2027. SBC rates, corporate income tax, turnover tax, VAT thresholds, and examples.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'Small Business Tax Rates in South Africa 2026/2027: Complete Guide | Tanosa Group',
-    description: 'Small business tax rates in South Africa for 2026/2027. SBC rates, corporate tax, turnover tax, personal income tax brackets, and VAT thresholds.',
+    title: 'Small Business Tax Rates SA 2026/2027 | Tanosa Group',
+    description: 'Small business tax rates in South Africa for 2026/2027. SBC rates, corporate income tax, turnover tax, VAT thresholds, and examples.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Small Business Tax Rates in South Africa 2026/2027: Complete Guide | Tanosa Group',
+    title: 'Small Business Tax Rates SA 2026/2027 | Tanosa Group',
     description: 'Small business tax rates in South Africa for 2026/2027.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 

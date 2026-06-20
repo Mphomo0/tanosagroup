@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
 const navLinks = [
@@ -14,9 +14,18 @@ const navLinks = [
   { name: 'Contact', href: '/contact' },
 ]
 
+const locations = [
+  { name: 'Botshabelo', href: '/locations/botshabelo' },
+  { name: 'Thaba Nchu', href: '/locations/thaba-nchu' },
+  { name: 'QwaQwa', href: '/locations/qwaqwa' },
+  { name: 'Zastron', href: '/locations/zastron' },
+]
+
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [locationsOpen, setLocationsOpen] = useState(false)
+  const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -24,6 +33,10 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  useEffect(() => {
+    setMobileLocationsOpen(false)
+  }, [pathname])
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prev) => {
@@ -34,6 +47,7 @@ export default function Navbar() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
+    setMobileLocationsOpen(false)
     document.body.style.overflow = 'unset'
   }
 
@@ -53,7 +67,7 @@ export default function Navbar() {
       <nav className="container-page flex items-center justify-between">
         <Link href="/" className="flex items-center shrink-0" aria-label="Tanosa Group Home">
           <Image
-            src="/images/Tanosa_Group_logo.png"
+            src="/images/Tanosa_Group_logo.webp"
             alt="Tanosa Group logo"
             width={200}
             height={70}
@@ -83,6 +97,49 @@ export default function Navbar() {
               )}
             </Link>
           ))}
+          <div
+            className="relative"
+            onMouseEnter={() => setLocationsOpen(true)}
+            onMouseLeave={() => setLocationsOpen(false)}
+          >
+            <button
+              className={`relative px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-1 ${
+                isActive('/locations')
+                  ? 'text-brand-700'
+                  : 'text-surface-600 hover:text-surface-900'
+              }`}
+              aria-expanded={locationsOpen}
+              aria-haspopup="true"
+            >
+              <span className="relative z-10">Locations</span>
+              <ChevronDown
+                size={14}
+                className={`relative z-10 transition-transform duration-200 ${
+                  locationsOpen ? 'rotate-180' : ''
+                }`}
+              />
+              {isActive('/locations') && (
+                <span className="absolute inset-0 bg-brand-50 rounded-full border border-brand-100" />
+              )}
+            </button>
+            {locationsOpen && (
+              <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-surface-200 py-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                {locations.map((loc) => (
+                  <Link
+                    key={loc.name}
+                    href={loc.href}
+                    className={`block px-4 py-2.5 text-sm transition-colors ${
+                      pathname === loc.href
+                        ? 'text-brand-700 bg-brand-50 font-medium'
+                        : 'text-surface-600 hover:text-surface-900 hover:bg-surface-50'
+                    }`}
+                  >
+                    {loc.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
           <Link
             href="/contact"
             className="ml-4 inline-flex items-center px-6 py-2.5 rounded-full text-sm font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-brand-500/20 hover:-translate-y-0.5"
@@ -121,6 +178,41 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+            <button
+              onClick={() => setMobileLocationsOpen(!mobileLocationsOpen)}
+              className={`w-full flex items-center justify-between px-5 py-3 rounded-xl text-base font-medium transition-all duration-200 ${
+                isActive('/locations')
+                  ? 'text-brand-700 bg-brand-50'
+                  : 'text-surface-600 hover:text-surface-900 hover:bg-surface-50'
+              }`}
+              aria-expanded={mobileLocationsOpen}
+            >
+              Locations
+              <ChevronDown
+                size={16}
+                className={`transition-transform duration-200 ${
+                  mobileLocationsOpen ? 'rotate-180' : ''
+                }`}
+              />
+            </button>
+            {mobileLocationsOpen && (
+              <div className="ml-4 space-y-1 border-l-2 border-surface-200 pl-4">
+                {locations.map((loc) => (
+                  <Link
+                    key={loc.name}
+                    href={loc.href}
+                    onClick={closeMobileMenu}
+                    className={`block px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
+                      pathname === loc.href
+                        ? 'text-brand-700 bg-brand-50'
+                        : 'text-surface-600 hover:text-surface-900 hover:bg-surface-50'
+                    }`}
+                  >
+                    {loc.name}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}

@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/home-office-deduction-south-africa'
 
 export const metadata: Metadata = {
-  title: { absolute: 'How to Claim a Home Office Deduction in South Africa | Tanosa Group' },
-  description: 'Complete guide to claiming a home office tax deduction in South Africa. Learn eligibility requirements, how to calculate the deduction, SARS rules, and common mistakes to avoid.',
+  title: { absolute: 'Home Office Deduction South Africa | Tanosa Group' },
+  description: 'Complete guide to claiming a home office tax deduction in South Africa. Eligibility, calculation, SARS rules, and common mistakes.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'How to Claim a Home Office Deduction in South Africa | Tanosa Group',
+    title: 'Home Office Deduction South Africa | Tanosa Group',
     description: 'Complete guide to claiming a home office tax deduction in South Africa. Eligibility, calculation, SARS rules, and common mistakes.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Claim a Home Office Deduction in South Africa | Tanosa Group',
+    title: 'Home Office Deduction South Africa | Tanosa Group',
     description: 'Complete guide to claiming a home office tax deduction in South Africa.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
@@ -108,7 +108,7 @@ export default function HomeOfficeDeductionGuide() {
           <div className="prose prose-lg max-w-none text-surface-600 leading-relaxed space-y-6">
             <p>
               If you work from home — whether as a business owner, freelancer, or employee — you
-              may be able to claim a home office deduction on your tax return. SARS allows you
+              may be able to claim <a href="/blog/tax-deductions-small-business-south-africa" className="text-brand-600 underline">tax deductions for small businesses</a> like the home office deduction on your tax return. SARS allows you
               to deduct a portion of your home expenses based on the space used for work.
               This guide explains how the deduction works and how to claim it correctly.
             </p>

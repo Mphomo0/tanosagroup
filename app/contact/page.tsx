@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'website',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png`, alt: 'Tanosa Group' }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp`, alt: 'Tanosa Group' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Contact Tanosa Group | Bloemfontein, Free State',
     description:
       'Contact Tanosa Group for accounting, tax returns, business registration, and consulting in Bloemfontein.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 

@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'website',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Branding & Marketing Services | Tanosa Group',
     description:
       'Professional branding, graphic design, digital marketing, and web development services in Bloemfontein, Free State.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 

@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/starting-business-free-state-south-africa'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Starting a Business in Free State, South Africa: Complete Guide | Tanosa Group' },
-  description: 'Complete guide to starting a business in the Free State, South Africa. CIPC registration, SARS compliance, local resources, funding, and support in Bloemfontein and surrounding areas.',
+  title: { absolute: 'Starting a Business in Free State, SA | Tanosa Group' },
+  description: 'Complete guide to starting a business in the Free State, South Africa. CIPC registration, SARS compliance, local resources, and funding support.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'Starting a Business in Free State, South Africa: Complete Guide | Tanosa Group',
+    title: 'Starting a Business in Free State, SA | Tanosa Group',
     description: 'Complete guide to starting a business in the Free State, South Africa. CIPC registration, SARS compliance, local resources, and funding.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Starting a Business in Free State, South Africa: Complete Guide | Tanosa Group',
+    title: 'Starting a Business in Free State, SA | Tanosa Group',
     description: 'Complete guide to starting a business in the Free State, South Africa.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 

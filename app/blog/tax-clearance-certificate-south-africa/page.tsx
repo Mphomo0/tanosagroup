@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/tax-clearance-certificate-south-africa'
 
 export const metadata: Metadata = {
-  title: { absolute: 'How to Get a Tax Clearance Certificate in South Africa | Tanosa Group' },
-  description: 'Complete guide to obtaining a SARS tax clearance certificate in South Africa. Learn how to apply, requirements, processing time, and how to check your tax compliance status.',
+  title: { absolute: 'Tax Clearance Certificate South Africa | Tanosa Group' },
+  description: 'Complete guide to obtaining a SARS tax clearance certificate in South Africa. How to apply, requirements, processing time, and checking compliance status.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'How to Get a Tax Clearance Certificate in South Africa | Tanosa Group',
+    title: 'Tax Clearance Certificate South Africa | Tanosa Group',
     description: 'Complete guide to obtaining a SARS tax clearance certificate. How to apply, requirements, processing time, and checking your compliance status.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Get a Tax Clearance Certificate in South Africa | Tanosa Group',
+    title: 'Tax Clearance Certificate South Africa | Tanosa Group',
     description: 'Complete guide to obtaining a SARS tax clearance certificate in South Africa.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 

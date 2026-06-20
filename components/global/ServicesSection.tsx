@@ -10,7 +10,7 @@ const services = [
     title: 'Consulting Services',
     description:
       'Expert analytical reviews of annual reports and performance information, ensuring MPACs are equipped for effective oversight.',
-    image: '/images/consulting.jpg',
+    image: '/images/consulting.webp',
     icon: Briefcase,
     href: '/services',
   },
@@ -18,7 +18,7 @@ const services = [
     title: 'Business Development and Training',
     description:
       'Strategic planning, financial services, mentoring, and tailored programs to enhance business performance.',
-    image: '/images/training.jpg',
+    image: '/images/training.webp',
     icon: GraduationCap,
     href: '/services',
   },
@@ -26,7 +26,7 @@ const services = [
     title: 'Branding and Marketing',
     description:
       'Strong brand identity and effective strategies to reach target audiences. Market research, brand development, and more.',
-    image: '/images/branding.jpg',
+    image: '/images/branding.webp',
     icon: Palette,
     href: '/services',
   },

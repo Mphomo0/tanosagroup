@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/sars-efiling-beginners-guide'
 
 export const metadata: Metadata = {
-  title: { absolute: 'SARS eFiling: Complete Beginner\'s Guide for Small Business Owners | Tanosa Group' },
-  description: 'Learn how to register and use SARS eFiling for your small business. Step-by-step guide to submitting tax returns, VAT returns, and managing your tax profile online.',
+  title: { absolute: 'SARS eFiling Beginner\'s Guide | Tanosa Group' },
+  description: 'Learn to register and use SARS eFiling for your small business. Step-by-step guide to submitting tax returns, VAT returns, and managing your profile.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'SARS eFiling: Complete Beginner\'s Guide for Small Business Owners | Tanosa Group',
-    description: 'Learn how to register and use SARS eFiling for your small business. Step-by-step guide to submitting tax returns, VAT returns, and managing your tax profile online.',
+    title: 'SARS eFiling Beginner\'s Guide | Tanosa Group',
+    description: 'Learn to register and use SARS eFiling for your small business. Step-by-step guide to submitting tax returns, VAT returns, and managing your profile.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SARS eFiling: Complete Beginner\'s Guide for Small Business Owners | Tanosa Group',
+    title: 'SARS eFiling Beginner\'s Guide | Tanosa Group',
     description: 'Learn how to register and use SARS eFiling for your small business. Step-by-step guide to submitting tax returns.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
@@ -247,7 +247,7 @@ export default function SarsEFilingGuide() {
             <h2 className="text-2xl font-bold text-surface-900 mt-10 mb-4">SARS eFiling Tips for Small Business Owners</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>Check your MCP regularly — do not wait until you need a tax clearance certificate.</li>
-              <li>Set calendar reminders for all tax deadlines (provisional tax, VAT, annual returns).</li>
+              <li>Set calendar reminders for all <a href="/blog/sars-tax-return-deadlines-2026" className="text-brand-600 underline">SARS tax return deadlines</a> (provisional tax, VAT, annual returns).</li>
               <li>Keep digital copies of all supporting documents (invoices, receipts, bank statements).</li>
               <li>Use the SARS MobiApp for quick status checks on your phone.</li>
               <li>Consider appointing a registered tax practitioner if your tax affairs are complex.</li>

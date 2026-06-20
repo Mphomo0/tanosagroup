@@ -44,11 +44,11 @@ export default function Footer() {
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-brand-800/20 rounded-full blur-[80px] -z-10" />
 
       <div className="container-page py-20 lg:py-24">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-2">
             <Link href="/" className="inline-block mb-6">
               <Image
-                src="/images/Tanosa_Group_logo.png"
+                src="/images/Tanosa_Group_logo.webp"
                 alt="Tanosa Group logo"
                 width={200}
                 height={70}
@@ -126,6 +126,28 @@ export default function Footer() {
                   >
                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-white text-base font-semibold mb-5">Locations</h3>
+            <ul className="space-y-3.5">
+              {[
+                { name: 'Botshabelo', href: '/locations/botshabelo' },
+                { name: 'Thaba Nchu', href: '/locations/thaba-nchu' },
+                { name: 'QwaQwa', href: '/locations/qwaqwa' },
+                { name: 'Zastron', href: '/locations/zastron' },
+              ].map((loc) => (
+                <li key={loc.name}>
+                  <Link
+                    href={loc.href}
+                    className="text-sm text-surface-400 hover:text-white transition-colors flex items-center gap-2 group"
+                  >
+                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {loc.name}
                   </Link>
                 </li>
               ))}

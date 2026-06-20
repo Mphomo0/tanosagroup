@@ -11,24 +11,24 @@ const baseUrl = 'https://www.tanosagroup.com'
 export const metadata: Metadata = {
   title: { absolute: 'Training & Capacity Building | Tanosa Group' },
   description:
-    'Professional training and capacity building programs in Bloemfontein, Free State. Business management, project management, financial oversight, and leadership workshops.',
+    'Professional training and capacity building in Bloemfontein, Free State. Business management, financial oversight, and leadership workshops.',
   alternates: { canonical: pageUrl },
   openGraph: {
     title: 'Training & Capacity Building | Tanosa Group',
     description:
-      'Professional training and capacity building programs in Bloemfontein, Free State. Business management, project management, financial oversight, and leadership workshops.',
+      'Professional training and capacity building programs in Bloemfontein, Free State. Business management, financial oversight, and leadership workshops.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'website',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Training & Capacity Building | Tanosa Group',
     description:
       'Professional training and capacity building programs in Bloemfontein, Free State.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 

@@ -10,7 +10,7 @@ const baseUrl = 'https://www.tanosagroup.com'
 export const metadata: Metadata = {
   title: { absolute: 'About Tanosa Group | Accounting & Business Consulting' },
   description:
-    'Learn about Tanosa Group — accounting, tax, business registration, and consulting services in Bloemfontein, Free State. Founded to deliver impactful financial and governance solutions.',
+    'Learn about Tanosa Group — accounting, tax, and business consulting in Bloemfontein, Free State. Impactful financial and governance solutions since 2009.',
   alternates: { canonical: pageUrl },
   openGraph: {
     title: 'About Tanosa Group | Accounting & Business Consulting',
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'website',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png`, alt: 'Tanosa Group' }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp`, alt: 'Tanosa Group' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About Tanosa Group | Accounting & Business Consulting',
     description:
       'Learn about Tanosa Group — accounting, tax, business registration, and consulting services in Bloemfontein, Free State.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 

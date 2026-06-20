@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/sars-audit-guide-south-africa'
 
 export const metadata: Metadata = {
-  title: { absolute: 'SARS Audit Guide: What to Expect and How to Prepare | Tanosa Group' },
-  description: 'Complete guide to SARS audits in South Africa. Learn what triggers an audit, the audit process, your rights, how to prepare, and what to do if you are selected for verification.',
+  title: { absolute: 'SARS Audit Guide: What to Expect | Tanosa Group' },
+  description: 'Complete guide to SARS audits in South Africa. What triggers an audit, the process, your rights, how to prepare, and what to do if selected for verification.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'SARS Audit Guide: What to Expect and How to Prepare | Tanosa Group',
-    description: 'Complete guide to SARS audits in South Africa. Learn what triggers an audit, the audit process, your rights, how to prepare, and what to do if selected.',
+    title: 'SARS Audit Guide: What to Expect | Tanosa Group',
+    description: 'Complete guide to SARS audits in South Africa. What triggers an audit, the process, your rights, how to prepare, and what to do if selected for verification.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SARS Audit Guide: What to Expect and How to Prepare | Tanosa Group',
+    title: 'SARS Audit Guide: What to Expect | Tanosa Group',
     description: 'Complete guide to SARS audits in South Africa.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
@@ -144,7 +144,7 @@ export default function SARSAuditGuide() {
 
             <h3 className="text-xl font-bold text-surface-900 mt-8 mb-3">Stage 1: Notification Letter</h3>
             <p>
-              You will receive a formal letter from SARS (via eFiling or post) notifying you that
+              You will receive a formal letter from SARS (via <a href="/blog/sars-efiling-beginners-guide" className="text-brand-600 underline">eFiling</a> or post) notifying you that
               your tax return has been selected for verification or audit. The letter will specify:
             </p>
             <ul className="list-disc pl-6 space-y-2">

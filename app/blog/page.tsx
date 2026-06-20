@@ -6,24 +6,24 @@ import PageHero from '@/components/global/PageHero'
 const baseUrl = 'https://www.tanosagroup.com'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Blog | Tanosa Group' },
+  title: { absolute: 'Accounting & Tax Blog South Africa | Tanosa Group' },
   description:
     'Expert insights on accounting, tax, business registration, and financial management in South Africa. Tips for small businesses and startups.',
   alternates: { canonical: `${baseUrl}/blog` },
   openGraph: {
-    title: 'Blog | Tanosa Group',
+    title: 'Accounting & Tax Blog South Africa | Tanosa Group',
     description: 'Expert insights on accounting, tax, business registration, and financial management in South Africa.',
     url: `${baseUrl}/blog`,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'website',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog | Tanosa Group',
+    title: 'Accounting & Tax Blog South Africa | Tanosa Group',
     description: 'Expert insights on accounting, tax, business registration, and financial management in South Africa.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 

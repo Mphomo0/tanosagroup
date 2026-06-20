@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/provisional-tax-south-africa-guide'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Provisional Tax in South Africa: Who Pays, Deadlines & How to Calculate | Tanosa Group' },
+  title: { absolute: 'Provisional Tax SA: Deadlines & Guide | Tanosa Group' },
   description: 'Complete guide to provisional tax in South Africa. Learn who must pay, deadlines for 2026/2027, how to calculate payments, and penalties for non-compliance.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'Provisional Tax in South Africa: Who Pays, Deadlines & How to Calculate | Tanosa Group',
+    title: 'Provisional Tax SA: Deadlines & Guide | Tanosa Group',
     description: 'Complete guide to provisional tax in South Africa. Learn who must pay, deadlines for 2026/2027, how to calculate payments, and penalties.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Provisional Tax in South Africa: Who Pays, Deadlines & How to Calculate | Tanosa Group',
+    title: 'Provisional Tax SA: Deadlines & Guide | Tanosa Group',
     description: 'Complete guide to provisional tax in South Africa. Learn who must pay, deadlines for 2026/2027, how to calculate payments, and penalties.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
@@ -219,7 +219,7 @@ export default function ProvisionalTaxGuide() {
             </div>
 
             <h2 className="text-2xl font-bold text-surface-900 mt-10 mb-4">How to Pay Provisional Tax</h2>
-            <p>Payments are made via SARS eFiling using the IRP6 return. You can pay through:</p>
+            <p>Payments are made via <a href="/blog/sars-efiling-beginners-guide" className="text-brand-600 underline">SARS eFiling</a> using the IRP6 return. You can pay through:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Direct deposit into SARS bank account (with the correct reference number)</li>
               <li>EFT on SARS eFiling</li>

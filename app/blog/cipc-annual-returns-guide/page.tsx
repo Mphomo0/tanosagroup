@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/cipc-annual-returns-guide'
 
 export const metadata: Metadata = {
-  title: { absolute: 'How to File CIPC Annual Returns: Complete Guide | Tanosa Group' },
+  title: { absolute: 'File CIPC Annual Returns Guide | Tanosa Group' },
   description: 'Complete guide to filing CIPC annual returns in South Africa. Learn when to file, fees for 2026, penalties for late filing, and how to avoid deregistration.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'How to File CIPC Annual Returns: Complete Guide | Tanosa Group',
+    title: 'File CIPC Annual Returns Guide | Tanosa Group',
     description: 'Complete guide to filing CIPC annual returns in South Africa. Learn when to file, fees for 2026, penalties for late filing, and how to avoid deregistration.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to File CIPC Annual Returns: Complete Guide | Tanosa Group',
+    title: 'File CIPC Annual Returns Guide | Tanosa Group',
     description: 'Complete guide to filing CIPC annual returns in South Africa.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
@@ -107,7 +107,7 @@ export default function CIPCAnnualReturnsGuide() {
 
           <div className="prose prose-lg max-w-none text-surface-600 leading-relaxed space-y-6">
             <p>
-              Every registered company and close corporation in South Africa must file an annual return
+              Every <a href="/blog/how-to-register-a-business-in-south-africa" className="text-brand-600 underline">registered company</a> and close corporation in South Africa must file an annual return
               with the Companies and Intellectual Property Commission (CIPC). This is separate from your
               tax return — it is a compliance filing that keeps your company in good standing.
               This guide explains everything you need to know.

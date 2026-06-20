@@ -23,24 +23,24 @@ const baseUrl = 'https://www.tanosagroup.com'
 export const metadata: Metadata = {
   title: { absolute: 'Accounting, Tax & Business Services | Tanosa Group' },
   description:
-    'Accounting, tax returns, business registration, consulting, training, and branding services in Bloemfontein, Free State. Serving SMEs and municipalities across South Africa.',
+    'Accounting, tax returns, business registration, consulting, and training in Bloemfontein, Free State. Serving SMEs and municipalities across South Africa.',
   alternates: { canonical: pageUrl },
   openGraph: {
     title: 'Accounting, Tax & Business Services | Tanosa Group',
     description:
-      'Accounting, tax returns, business registration, consulting, training, and branding services in Bloemfontein, Free State. Serving SMEs and municipalities across South Africa.',
+      'Accounting, tax returns, business registration, consulting, and training in Bloemfontein, Free State. Serving SMEs and municipalities across South Africa.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'website',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png`, alt: 'Tanosa Group' }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp`, alt: 'Tanosa Group' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Accounting, Tax & Business Services | Tanosa Group',
     description:
       'Accounting, tax returns, business registration, consulting, training, and branding services in Bloemfontein, Free State.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 

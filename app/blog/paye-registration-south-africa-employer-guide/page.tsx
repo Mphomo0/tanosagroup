@@ -6,7 +6,7 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/paye-registration-south-africa-employer-guide'
 
 export const metadata: Metadata = {
-  title: { absolute: 'How to Register for PAYE in South Africa: Employer\'s Guide | Tanosa Group' },
+  title: { absolute: 'PAYE Registration SA: Employer\'s Guide | Tanosa Group' },
   description: 'Complete guide to registering for PAYE, UIF, and SDL in South Africa. Learn employer tax obligations, deadlines, and how to submit EMP201 and EMP501 returns.',
   alternates: { canonical: pageUrl },
   openGraph: {
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'How to Register for PAYE in South Africa: Employer\'s Guide | Tanosa Group',
     description: 'Complete guide to registering for PAYE, UIF, and SDL in South Africa.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
@@ -188,7 +188,7 @@ export default function PAYERegistrationGuide() {
 
             <h2 className="text-2xl font-bold text-surface-900 mt-10 mb-4">Step 2: Register for UIF</h2>
             <p>
-              The Unemployment Insurance Fund (UIF) provides short-term financial relief to workers who
+              The <a href="/blog/uif-coida-registration-south-africa" className="text-brand-600 underline">Unemployment Insurance Fund (UIF)</a> provides short-term financial relief to workers who
               lose their jobs or cannot work due to illness, maternity, or adoption leave.
             </p>
             <ul className="list-disc pl-6 space-y-2">

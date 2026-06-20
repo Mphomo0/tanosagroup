@@ -12,24 +12,24 @@ const baseUrl = 'https://www.tanosagroup.com'
 export const metadata: Metadata = {
   title: { absolute: 'Accounting & Tax Services Bloemfontein | Tanosa Group' },
   description:
-    'Professional accounting, tax returns, bookkeeping, and payroll services in Bloemfontein, Free State. SARS tax compliance, financial statements, and CFO services for SMEs.',
+    'Professional accounting, tax returns, bookkeeping, and payroll in Bloemfontein, Free State. SARS tax compliance, financial statements, and CFO advisory.',
   alternates: { canonical: pageUrl },
   openGraph: {
     title: 'Accounting & Tax Services Bloemfontein | Tanosa Group',
     description:
-      'Professional accounting, tax returns, bookkeeping, and payroll services in Bloemfontein, Free State. SARS tax compliance, financial statements, and CFO services.',
+      'Professional accounting, tax returns, bookkeeping, and payroll in Bloemfontein, Free State. SARS tax compliance, financial statements, and CFO advisory.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'website',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png`, alt: 'Tanosa Group Accounting Services' }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp`, alt: 'Tanosa Group Accounting Services' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Accounting & Tax Services Bloemfontein | Tanosa Group',
     description:
       'Professional accounting, tax returns, bookkeeping, and payroll services in Bloemfontein, Free State.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
@@ -179,7 +179,7 @@ export default function AccountingTaxPage() {
             <div className="absolute -inset-4 bg-gradient-to-br from-brand-200/40 to-brand-100/20 rounded-3xl blur-2xl" />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/50">
               <Image
-                src="/images/lady-image.jpg"
+                src="/images/lady-image.webp"
                 alt="Accounting and tax services Bloemfontein"
                 width={600}
                 height={400}

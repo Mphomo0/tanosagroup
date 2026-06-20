@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/turnover-tax-vs-vat-south-africa'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Turnover Tax vs VAT in South Africa: Which Is Better for Your Business? | Tanosa Group' },
-  description: 'Compare turnover tax and VAT for small businesses in South Africa. Learn the pros and cons of each, which businesses qualify, and how to choose the right tax system.',
+  title: { absolute: 'Turnover Tax vs VAT in South Africa | Tanosa Group' },
+  description: 'Compare turnover tax and VAT for small businesses in South Africa. Learn the pros and cons, qualification, and how to choose the right tax system.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'Turnover Tax vs VAT in South Africa: Which Is Better for Your Business? | Tanosa Group',
+    title: 'Turnover Tax vs VAT in South Africa | Tanosa Group',
     description: 'Compare turnover tax and VAT for small businesses in South Africa. Pros and cons, qualification criteria, and how to choose the right system.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Turnover Tax vs VAT in South Africa: Which Is Better for Your Business? | Tanosa Group',
+    title: 'Turnover Tax vs VAT in South Africa | Tanosa Group',
     description: 'Compare turnover tax and VAT for small businesses in South Africa.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 

@@ -32,7 +32,7 @@ export default function AdditionalServices() {
       </div>
       <div className="mt-8">
         <Image
-          src="/images/cleaning.jpg"
+          src="/images/cleaning.webp"
           alt="Drain Cleaning and Honeysucker Services"
           width={500}
           height={300}

@@ -115,7 +115,7 @@ export default function BrandingMarketing() {
         </div>
         <div className="relative">
           <Image
-            src="/images/branding.jpg"
+            src="/images/branding.webp"
             alt="Branding and Marketing Services"
             width={600}
             height={400}

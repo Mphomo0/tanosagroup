@@ -101,7 +101,7 @@ export default function Hero() {
               <div className="absolute -inset-4 bg-gradient-to-br from-brand-200/50 via-brand-100/30 to-transparent rounded-3xl blur-2xl" />
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/50">
                 <Image
-                  src="/images/transparent.png"
+                  src="/images/transparent.webp"
                   alt="Tanosa Group — Municipal governance and business solutions"
                   width={800}
                   height={800}

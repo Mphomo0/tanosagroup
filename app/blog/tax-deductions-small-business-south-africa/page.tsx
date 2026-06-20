@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/tax-deductions-small-business-south-africa'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Tax Deductions for Small Businesses in South Africa | Tanosa Group' },
+  title: { absolute: 'Tax Deductions for Small Business SA | Tanosa Group' },
   description: 'Learn which tax deductions South African small business owners can claim to reduce taxable income. SARS-compliant deductions for 2026 tax year.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'Tax Deductions for Small Businesses in South Africa | Tanosa Group',
+    title: 'Tax Deductions for Small Business SA | Tanosa Group',
     description: 'Learn which tax deductions South African small business owners can claim to reduce taxable income.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tax Deductions for Small Businesses in South Africa | Tanosa Group',
+    title: 'Tax Deductions for Small Business SA | Tanosa Group',
     description: 'Learn which tax deductions South African small business owners can claim to reduce taxable income.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
@@ -59,7 +59,7 @@ export default function TaxDeductionsPage() {
             <p>Business insurance premiums, including public liability, professional indemnity, and asset insurance, are tax deductible.</p>
 
             <h2 className="text-2xl font-bold text-surface-900 mt-10 mb-4">7. Home Office Deduction</h2>
-            <p>If you work from home, you can claim a portion of your bond interest or rent, electricity, internet, and cleaning costs based on the floor area used exclusively for business.</p>
+            <p>If you work from home, see our <a href="/blog/home-office-deduction-south-africa" className="text-brand-600 underline">home office deduction guide</a> to claim a portion of your bond interest or rent, electricity, internet, and cleaning costs based on the floor area used exclusively for business.</p>
 
             <div className="bg-brand-50 rounded-2xl p-8 mt-10">
               <h3 className="text-xl font-bold text-surface-900 mb-3">Need Help Maximising Your Deductions?</h3>

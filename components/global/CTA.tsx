@@ -6,7 +6,7 @@ export default function CTA() {
     <section className="relative overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/woman-phone.jpg')" }}
+        style={{ backgroundImage: "url('/images/woman-phone.webp')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-surface-900/95 via-surface-900/85 to-surface-900/70" />
         <div className="absolute inset-0 bg-pattern opacity-10" />

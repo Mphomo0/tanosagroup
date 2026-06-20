@@ -36,7 +36,7 @@ export default function PlantHire() {
         </div>
         <div className="space-y-4">
           <Image
-            src="/images/planthire.jpg"
+            src="/images/planthire.webp"
             alt="Tanosa Group Plant Hire Equipment"
             width={600}
             height={400}
@@ -44,14 +44,14 @@ export default function PlantHire() {
           />
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/images/plant2.jpg"
+              src="/images/plant2.webp"
               alt="Construction equipment"
               width={300}
               height={200}
               className="w-full h-36 object-cover rounded-2xl shadow-sm"
             />
             <Image
-              src="/images/plant3.jpg"
+              src="/images/plant3.webp"
               alt="Heavy machinery"
               width={300}
               height={200}

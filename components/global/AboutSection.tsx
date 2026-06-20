@@ -97,7 +97,7 @@ export default function AboutSection() {
               <div className="absolute -inset-4 bg-gradient-to-br from-brand-200/40 to-brand-100/20 rounded-3xl blur-2xl" />
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/50">
                 <Image
-                  src="/images/about1.jpg"
+                  src="/images/about1.webp"
                   alt="Tanosa Group team collaboration"
                   width={600}
                   height={450}

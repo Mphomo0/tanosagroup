@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/bbbee-certificates-small-business-sa'
 
 export const metadata: Metadata = {
-  title: { absolute: 'B-BBEE Certificates for Small Businesses in South Africa: Complete Guide | Tanosa Group' },
-  description: 'Complete guide to B-BBEE certificates for EMEs and QSEs in South Africa. Learn how to get your B-BBEE certificate, scorecard levels, and compliance requirements.',
+  title: { absolute: 'B-BBEE Certificates for Small Business SA | Tanosa Group' },
+  description: 'Complete guide to B-BBEE certificates for EMEs and QSEs in South Africa. How to get your certificate, scorecard levels, and compliance requirements.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'B-BBEE Certificates for Small Businesses in South Africa: Complete Guide | Tanosa Group',
-    description: 'Complete guide to B-BBEE certificates for EMEs and QSEs. Learn how to get your B-BBEE certificate, scorecard levels, and compliance requirements.',
+    title: 'B-BBEE Certificates for Small Business SA | Tanosa Group',
+    description: 'Complete guide to B-BBEE certificates for EMEs and QSEs in South Africa. How to get your certificate, scorecard levels, and compliance requirements.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'B-BBEE Certificates for Small Businesses in South Africa: Complete Guide | Tanosa Group',
+    title: 'B-BBEE Certificates for Small Business SA | Tanosa Group',
     description: 'Complete guide to B-BBEE certificates for EMEs and QSEs in South Africa.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
 
   },
 }
@@ -265,7 +265,7 @@ export default function BBBEECertificatesGuide() {
               <li>
                 <strong>CIPC BizPortal</strong> — EMEs can register for a free B-BBEE certificate on the
                 CIPC BizPortal website. This is the easiest and most cost-effective option. You will need
-                your company registration number and ownership details.
+                your <a href="/blog/how-to-register-a-business-in-south-africa" className="text-brand-600 underline">company registration number</a> and ownership details.
               </li>
               <li>
                 <strong>Accredited Verification Agencies</strong> — Some SANAS-accredited agencies offer

@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/vat-return-submission-sars-efiling'
 
 export const metadata: Metadata = {
-  title: { absolute: 'How to Submit a VAT Return (VAT201) on SARS eFiling | Tanosa Group' },
-  description: 'Step-by-step guide to completing and submitting your VAT201 return on SARS eFiling. Learn how to calculate input and output tax, avoid common errors, and pay on time.',
+  title: { absolute: 'Submit a VAT Return on SARS eFiling | Tanosa Group' },
+  description: 'Step-by-step guide to completing your VAT201 return on SARS eFiling. Learn to calculate input and output tax, avoid errors, and pay on time.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'How to Submit a VAT Return (VAT201) on SARS eFiling | Tanosa Group',
+    title: 'Submit a VAT Return on SARS eFiling | Tanosa Group',
     description: 'Step-by-step guide to completing and submitting your VAT201 return on SARS eFiling.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Submit a VAT Return (VAT201) on SARS eFiling | Tanosa Group',
+    title: 'Submit a VAT Return on SARS eFiling | Tanosa Group',
     description: 'Step-by-step guide to completing and submitting your VAT201 return on SARS eFiling.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 

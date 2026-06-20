@@ -12,24 +12,24 @@ const baseUrl = 'https://www.tanosagroup.com'
 export const metadata: Metadata = {
   title: { absolute: 'Business Registration Services | Tanosa Group' },
   description:
-    'Business and company registration in South Africa. CIPC registration, close corporation, non-profit, tax registration, and B-BBEE consulting. Serving Bloemfontein and Free State.',
+    'Company and business registration in South Africa. CIPC, close corporation, non-profit, tax registration, and B-BBEE consulting in Bloemfontein and Free State.',
   alternates: { canonical: pageUrl },
   openGraph: {
     title: 'Business Registration Services | Tanosa Group',
     description:
-      'Business and company registration in South Africa. CIPC registration, close corporation, non-profit, tax registration, and B-BBEE consulting. Serving Bloemfontein and Free State.',
+      'Company and business registration in South Africa. CIPC, close corporation, non-profit, tax registration, and B-BBEE consulting in Bloemfontein and Free State.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'website',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png`, alt: 'Tanosa Group Business Registration' }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp`, alt: 'Tanosa Group Business Registration' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Business Registration Services | Tanosa Group',
     description:
       'Business and company registration in South Africa. CIPC registration, close corporation, non-profit, and tax registration.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
@@ -95,7 +95,7 @@ export default function BusinessRegistrationPage() {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="order-2 lg:order-none">
             <Image
-              src="/images/woman.png"
+              src="/images/woman.webp"
               alt="Business registration services South Africa"
               width={600}
               height={400}

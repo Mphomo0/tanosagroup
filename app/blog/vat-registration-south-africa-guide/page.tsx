@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/vat-registration-south-africa-guide'
 
 export const metadata: Metadata = {
-  title: { absolute: 'How to Register for VAT in South Africa: Complete Guide | Tanosa Group' },
+  title: { absolute: 'VAT Registration South Africa Guide | Tanosa Group' },
   description: 'Complete guide to VAT registration in South Africa. Learn when to register, the application process, documents needed, and VAT return filing requirements.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'How to Register for VAT in South Africa: Complete Guide | Tanosa Group',
+    title: 'VAT Registration South Africa Guide | Tanosa Group',
     description: 'Complete guide to VAT registration in South Africa. Learn when to register, the application process, documents needed, and VAT return filing.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Register for VAT in South Africa: Complete Guide | Tanosa Group',
+    title: 'VAT Registration South Africa Guide | Tanosa Group',
     description: 'Complete guide to VAT registration in South Africa. Learn when to register, the application process, documents needed, and VAT return filing.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
@@ -227,7 +227,7 @@ export default function VATRegistrationGuide() {
               <li><strong>eFiling submissions:</strong> Due by the last business day of the month following the VAT period.</li>
             </ul>
             <p>
-              Late submissions attract penalties and interest. SARS imposes a 10% penalty on unpaid VAT
+              Late <a href="/blog/vat-return-submission-sars-efiling" className="text-brand-600 underline">submitting your VAT return on SARS eFiling</a> can attract penalties and interest. SARS imposes a 10% penalty on unpaid VAT
               and interest at the prescribed rate on overdue amounts.
             </p>
 

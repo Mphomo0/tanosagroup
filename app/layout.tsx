@@ -49,14 +49,14 @@ export const metadata: Metadata = {
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'website',
-    images: [{ url: '/images/Tanosa_Group_logo.png', alt: 'Tanosa Group' }],
+    images: [{ url: '/images/Tanosa_Group_logo.webp', alt: 'Tanosa Group' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Accounting, Tax & Business Consulting | Tanosa Group',
     description:
       'Accounting services, tax returns, business registration, and consulting in Bloemfontein, Free State. Serving startups, SMEs, and municipalities across South Africa.',
-    images: ['/images/Tanosa_Group_logo.png'],
+    images: ['/images/Tanosa_Group_logo.webp'],
   },
   robots: {
     index: true,
@@ -79,7 +79,7 @@ const jsonLd = {
       '@id': `${baseUrl}/#organization`,
       name: 'Tanosa Group',
       url: baseUrl,
-      logo: `${baseUrl}/images/Tanosa_Group_logo.png`,
+      logo: `${baseUrl}/images/Tanosa_Group_logo.webp`,
       foundingDate: '2009',
       description:
         'Accounting, tax, business registration, and consulting services in Bloemfontein, Free State. Serving startups, SMEs, and municipalities across South Africa.',
@@ -159,7 +159,7 @@ const jsonLd = {
       '@id': `${baseUrl}/#business`,
       parentOrganization: { '@id': `${baseUrl}/#organization` },
       name: 'Tanosa Group',
-      image: `${baseUrl}/images/Tanosa_Group_logo.png`,
+      image: `${baseUrl}/images/Tanosa_Group_logo.webp`,
       url: baseUrl,
       telephone: '+27-79-596-6442',
       email: 'tanosatrading@gmail.com',

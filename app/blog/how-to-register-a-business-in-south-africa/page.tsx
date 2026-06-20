@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'How to Register a Business in South Africa | Tanosa Group',
     description: 'Complete step-by-step guide to registering a business in South Africa with CIPC, SARS tax registration, and compliance requirements.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
@@ -75,7 +75,7 @@ export default function BlogPost() {
             </p>
 
             <h2 className="text-2xl font-bold text-surface-900 mt-10 mb-4">Step 1: Choose Your Business Structure</h2>
-            <p>Before registering, decide which structure suits your needs:</p>
+            <p>Before registering, see our guide on <a href="/blog/choosing-business-structure-south-africa" className="text-brand-600 underline">choosing the right business structure</a> for your business:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Private Company (Pty) Ltd</strong> — Most common for small to medium businesses. Limited liability, separate legal entity.</li>
               <li><strong>Close Corporation (CC)</strong> — Being phased out but still in use. Simpler structure.</li>

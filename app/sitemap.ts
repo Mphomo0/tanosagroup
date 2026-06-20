@@ -32,6 +32,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog/uif-coida-registration-south-africa`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/blog/how-to-register-a-business-in-south-africa`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/blog/sars-tax-return-deadlines-2026`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/blog/choosing-business-structure-south-africa`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/blog/tax-deductions-small-business-south-africa`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
 
     { url: `${baseUrl}/locations/botshabelo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/locations/thaba-nchu`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },

@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/uif-coida-registration-south-africa'
 
 export const metadata: Metadata = {
-  title: { absolute: 'UIF and COIDA Registration for Employers in South Africa | Tanosa Group' },
+  title: { absolute: 'UIF & COIDA Registration for SA Employers | Tanosa Group' },
   description: 'Complete guide to UIF and COIDA registration in South Africa. Learn how to register, contribution rates, deadlines, and employer compliance requirements.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'UIF and COIDA Registration for Employers in South Africa | Tanosa Group',
+    title: 'UIF & COIDA Registration for SA Employers | Tanosa Group',
     description: 'Complete guide to UIF and COIDA registration in South Africa. How to register, contribution rates, deadlines, and employer compliance.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UIF and COIDA Registration for Employers in South Africa | Tanosa Group',
+    title: 'UIF & COIDA Registration for SA Employers | Tanosa Group',
     description: 'Complete guide to UIF and COIDA registration in South Africa.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 

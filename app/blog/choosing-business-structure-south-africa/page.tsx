@@ -6,23 +6,23 @@ const baseUrl = 'https://www.tanosagroup.com'
 const pageUrl = 'https://www.tanosagroup.com/blog/choosing-business-structure-south-africa'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Choosing the Right Business Structure in South Africa | Tanosa Group' },
+  title: { absolute: 'Business Structure Guide South Africa | Tanosa Group' },
   description: 'Sole proprietor, close corporation, or private company? Compare business structures in South Africa and find the best fit for your startup or SME.',
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: 'Choosing the Right Business Structure in South Africa | Tanosa Group',
+    title: 'Business Structure Guide South Africa | Tanosa Group',
     description: 'Sole proprietor, close corporation, or private company? Compare business structures in South Africa.',
     url: pageUrl,
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'article',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Choosing the Right Business Structure in South Africa | Tanosa Group',
+    title: 'Business Structure Guide South Africa | Tanosa Group',
     description: 'Sole proprietor, close corporation, or private company? Compare business structures in South Africa.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
@@ -46,7 +46,7 @@ export default function BusinessStructurePage() {
 
             <h2 className="text-2xl font-bold text-surface-900 mt-10 mb-4">Private Company (Pty) Ltd</h2>
             <p><strong>Best for:</strong> Growing businesses with employees, seeking funding or contracts.</p>
-            <p>A Pty Ltd is a separate legal entity. Shareholders have limited liability, meaning personal assets are protected. Required to register with CIPC, SARS, and comply with the Companies Act. More administrative work but offers credibility and protection.</p>
+            <p>A Pty Ltd is a separate legal entity. Shareholders have limited liability, meaning personal assets are protected. Required to <a href="/blog/how-to-register-a-business-in-south-africa" className="text-brand-600 underline">register with CIPC</a>, SARS, and comply with the Companies Act. More administrative work but offers credibility and protection.</p>
 
             <h2 className="text-2xl font-bold text-surface-900 mt-10 mb-4">Close Corporation (CC)</h2>
             <p><strong>Best for:</strong> Existing CCs still operating (new CCs can no longer be registered).</p>

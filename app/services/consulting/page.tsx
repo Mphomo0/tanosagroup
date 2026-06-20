@@ -11,7 +11,7 @@ const baseUrl = 'https://www.tanosagroup.com'
 export const metadata: Metadata = {
   title: { absolute: 'Business Consulting Services Bloemfontein | Tanosa Group' },
   description:
-    'Business consulting, project management, risk management, and municipal advisory services in Bloemfontein and Free State. Strategic planning and operational improvement.',
+    'Business consulting, project management, and municipal advisory services in Bloemfontein and Free State. Strategic planning and operational improvement.',
   alternates: { canonical: pageUrl },
   openGraph: {
     title: 'Business Consulting Services Bloemfontein | Tanosa Group',
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     siteName: 'Tanosa Group',
     locale: 'en_ZA',
     type: 'website',
-    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.png` }],
+    images: [{ url: `${baseUrl}/images/Tanosa_Group_logo.webp` }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Business Consulting Services Bloemfontein | Tanosa Group',
     description:
       'Business consulting, project management, risk management, and municipal advisory services in Bloemfontein and Free State.',
-    images: [`${baseUrl}/images/Tanosa_Group_logo.png`],
+    images: [`${baseUrl}/images/Tanosa_Group_logo.webp`],
   },
 }
 
